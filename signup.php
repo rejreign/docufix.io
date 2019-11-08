@@ -55,13 +55,13 @@ if(isset($_POST['submit'])){
                            $result = mysqli_query($conn , $sql);
                     if($result){
                                     $message .= '<div class="alert alert-success" role="alert">
-                                    Record Saved Successfully <button class="btn"><a href = "index.html">Home</a></button></div>';
+                                    Record Saved Successfully <button class="btn"><a href = "index.php">Home</a></button></div>';
                                             echo ($message);
 
                     }
                     else{
                         $message .= '<div class="alert alert-danger" role="alert">
-                        Record not Saved ' . mysqli_error($conn) . '<button class="btn"><a href = "index.html">Home</a></button>
+                        Record not Saved ' . mysqli_error($conn) . '<button class="btn"><a href = "index.php">Home</a></button>
                         </div>';
                     
                     }
@@ -629,7 +629,7 @@ if(isset($_POST['submit'])){
             <div class="row   ">
                 <div class="col-sm-12 bar justify-content-between">
                     <div class="col-lg-4 col-sm-3">
-                        <a class="navbar-brand  " href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image" width="75"  height="13"></a>
+                        <a class="navbar-brand  " href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image" width="75"  height="13"></a>
                     </div>
                     <div class="col-lg-2 col-sm-4 lc">
                         <a class="link " href="login.php">Sign in</a>

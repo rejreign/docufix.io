@@ -33,7 +33,7 @@
 <body class="profile-body"> 
   <div class="container-fluid profile-box my-5 mx-90 mx-auto">  
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572602189/docufix/Docufix_Logo_pzbbzi.png" alt="logo" class="logo-img img-fluid"></a>
+      <a class="navbar-brand" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572602189/docufix/Docufix_Logo_pzbbzi.png" alt="logo" class="logo-img img-fluid"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -41,24 +41,24 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Dashboard</a>
+            <a class="nav-link" href="profile.php">Dashboard</a>
           </li>
           <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Tools
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-justify" href="fileUpload.html">Compare files</a>
-                    <a class="dropdown-item text-justify" href="grammarChecker.html">Grammar Check</a>
-                    <a class="dropdown-item text-justify" href="fileDuplicate.html">Check for Duplicates</a>
+                    <a class="dropdown-item text-justify" href="fileUpload.php">Compare files</a>
+                    <a class="dropdown-item text-justify" href="grammarChecker.php">Grammar Check</a>
+                    <a class="dropdown-item text-justify" href="fileDuplicate.php">Check for Duplicates</a>
                   </div>
             </li>
 
           <!-- <li class="nav-item">
-            <a class="nav-link" href="index.html">Logout</a>
+            <a class="nav-link" href="index.php">Logout</a>
           </li> -->
 
           <li class="nav-item"> 
@@ -91,15 +91,14 @@
 
             <div class = "profile-info-bloc">
             <h5>Total Documents Analyzed</h5>
-             <span class="btn prof-btn mr-2 mt-4">3</span>
+             <span class="btn prof-btn mr-2 mt-4">0</span>
             </div>
 
             <div class = "profile-info-bloc">
             <h5 class="mb-4">Recently Analyzed Documents</h5>
 
-            <span class="btn prof-btn mb-4 mr-2 d-block">Document Title 1</span>
-            <span class="btn prof-btn mb-4 mr-2 d-block">Document Title 2</span>
-            <span class="btn prof-btn mb-4 mr-2 d-block">Document Title 3</span>
+            <span class="btn prof-btn mb-4 mr-2 d-block">No document Analyzed Yet</span>
+           
            </div>
             
         </section>

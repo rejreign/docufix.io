@@ -1,3 +1,6 @@
+<?php
+  include 'controller.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,7 +30,7 @@
                 <!--Header-->
                  <header>
           <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
-            <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" id="image"></a>
+            <a class="navbar-brand px-sm-5 ml-3" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" id="image"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -42,20 +45,40 @@
                     Tools
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-justify" href="fileUpload.html">Compare files</a>
-                    <a class="dropdown-item text-justify" href="grammarChecker.html">Grammar Check</a>
-                    <a class="dropdown-item text-justify" href="fileDuplicate.html">Duplicates Check</a>
+                    <a class="dropdown-item text-justify" href="fileUpload.php">Compare files</a>
+                    <a class="dropdown-item text-justify" href="grammarChecker.php">Grammar Check</a>
+                    <a class="dropdown-item text-justify" href="fileDuplicate.php">Duplicates Check</a>
                   </div>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-center" href="teampage.html">Our Team</a>
                 </li>
-                <li class="nav-item">
+                <?php
+                  if(!isset($_SESSION['login_user'])){
+                  echo '
+                  <li class="nav-item">
                     <a class="nav-link text-center" href="login.php">Login</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-center" href="signup.php">Get Started</a>
                 </li>
+                  ';
+
+
+                }
+                else
+                {
+                    echo '
+                  <li class="nav-item">
+                    <a class="nav-link text-center" href="profile.php">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="logout.php">logout</a>
+                </li>
+                  ';
+                }
+                ?>
+                
                 
               </ul>
             </div>
@@ -70,9 +93,9 @@
             <li><a href="#">About us</a></li>
             <li><a href="#">Tools<i class="fas fa-caret-down"></i></a>
               <ul>
-                <li><a href="https://docufix.io/fileUpload.html">Compare files</a></li>
-                <li><a href="https://docufix.io/grammarChecker.html">Grammar Check</a></li>
-                <li><a href="https://docufix.io/fileDuplicate.html">Duplicates Check</a></li>
+                <li><a href="https://docufix.io/fileUpload.php">Compare files</a></li>
+                <li><a href="https://docufix.io/grammarChecker.php">Grammar Check</a></li>
+                <li><a href="https://docufix.io/fileDuplicate.php">Duplicates Check</a></li>
                 <li><a href="plagiarismChecker.html">Plagiarism Check</a></li>
                 <li><a href="https://docufix.io/paraphrase.html">Paraphrasing tool</a></li>
               </ul>
@@ -91,8 +114,8 @@
                     <p>Compare documents content and find out the differences in each content of the files without much stress</p>
                 </div>
                 <div data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">
-                    <button class="b-btn comp-btn"><a href="./fileUpload.html">Compare files</a></button>
-                    <button class="b-btn dup-btn"><a href="./fileDuplicate.html">Check duplicates</a></button>
+                    <button class="b-btn comp-btn"><a href="./fileUpload.php">Compare files</a></button>
+                    <button class="b-btn dup-btn"><a href="./fileDuplicate.php">Check duplicates</a></button>
                 </div>
             </div>
     
@@ -287,7 +310,7 @@
           <div class="container mt-3"><hr>
             <div class="row">
                 <div class="col-sm-6" id="docufix">
-                    <a class="navbar-brand  text-justify" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+                    <a class="navbar-brand  text-justify" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
                     <p class="text-justify">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
                 </div>
               <div class="col-sm-6 text-center">           
@@ -354,7 +377,7 @@ $(document).ready(function(){
     }).done (function (data){
       setTimeout(function(){
         $('.txt').html(data);
-          $("#newsForm").trigger("reset");
+        $("#newsForm").trigger("reset");
       }, delay);
     });
   });
