@@ -13,6 +13,10 @@ a:link {
   font-size: 18px;
   color: #3B1F9E;
 }
+a:hover {
+  text-decoration: none;
+  color: #ffa500;
+}
 
 .sm-txt {
   margin-bottom: 10px;
@@ -71,11 +75,11 @@ a:link {
 input[type='email'],
 input[type='password'],
 input[type='text'] {
-  width: 75%;
-  height: 70px;
+  width: 60%;
+  height: 50px;
   padding: 19px 24px;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 33px;
   color: #C4C4C4;
   border: 1px solid #C4C4C4;
@@ -84,9 +88,10 @@ input[type='text'] {
 }
 
 button {
-  width: 75%;
+  width: 60%;
+  height: 50px;
   display: block;
-  padding: 22px;
+  padding: 11px 22px 11px 22px ;
   background: #3B1F9E;
   border-radius: 51px;
   outline: none;
@@ -96,7 +101,8 @@ button {
   font-size: 24px;
   line-height: 33px;
   color: #FFFFFF;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  
 }
 
 @media (max-width: 1150px) {
@@ -110,7 +116,15 @@ button {
 @media (max-width: 768px){
   h3, .sm-txt {
     text-align: center !important;
-
+  }
+  
+}
+@media (width: 768px){
+  input[type='email'],
+  input[type='password'],
+  input[type='text'],
+  button {
+    margin-left: 8%;
   }
 }
 @media(min-width: 768px) {
@@ -118,7 +132,8 @@ button {
   input[type='password'],
   input[type='text'],
   button {
-    width: 100% !important;
+    width: 85% !important;
+
   } 
 }
 
@@ -151,6 +166,8 @@ button {
   input[type='text'],
   button {
     width: 100%;
+    height: 50px;
+   
   }
 }
 
@@ -172,7 +189,7 @@ button {
       line-height: 1.375em;
   }
   #footer a:hover{
-      color: rgba(12, 10, 90, 0.8) !important;
+      color: #ffa500 !important;
   } 
  #footer p > a{
       color: #3B1F9E !important;
