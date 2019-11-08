@@ -454,7 +454,7 @@
 
               
 
-                <!-- FROM @Major  -->
+                <!-- <!-- FROM @Major  -->
                 <div id="myModal" class="modal fade" role="dialog">
                   <div class="modal-dialog">
                 
@@ -470,12 +470,12 @@
                           <br />
             
                           <input type="text" placeholder="Please Specify Document Name..." id="saveAs" required></input><br/>
-                          <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i
+                          <button id="btn-export" onclick="exportHTML();" class="mt-2 mb-5" style="padding: 7px 14px; background-color:  #3B1F9E; color: white;"><i
                               class="fas fa-cloud-download-alt"></i> Download as word
                             doc</button>
-                          <button id="cmd" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i
-                              class="fas fa-cloud-download-alt"></i>Download as PDF</button>
-                              <button id="btn-export" onclick="txt();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i
+                          <button id="cmd" class="mt-2 mb-5"style =" padding: 7px 14px; background-color:  #3B1F9E; color: white;"><i
+                              class="fas fa-cloud-download-alt" ></i>Download as PDF</button>
+                              <button id="btn-export" onclick="txt();" class="mt-2 mb-5" style="padding: 7px 14px; background-color:  #3B1F9E; color: white;""><i
                                 class="fas fa-cloud-download-alt"></i> Download as .txt
                         </button>
                         
@@ -489,8 +489,6 @@
                 </div>
 
                
-          
-
           
 
                   <!--JOVIAL SAVE AS EMAIL MODAL-->
@@ -521,16 +519,15 @@
               <!--  -->
                
                     <div class="modal-footer">
-                            <button type="submit" name="submit" id="closeSend" class="btn btn-default">Send!</button>
+                            <button type="submit" name="submit" id="closeSend" class="btn btn-default" style="padding: 7px 14px; background-color:  #3B1F9E; color: white;">Send!</button>
                       </form>
             
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-default" data-dismiss="modal" style="padding: 7px 14px; background-color:  #3B1F9E; color: white;">Close</button>
                     </div>
                   </div>
                   
                 </div>
               </div>
-            
 
                 <!---MODAL FOR SAVE AS-->
           
