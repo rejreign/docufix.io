@@ -302,6 +302,7 @@ if(isset($_POST['submit'])){
                 padding-right: 70px !important; 
                 margin-left: -145px !important;
                 margin-bottom: 10px;
+<<<<<<< HEAD
 
             }
             .signup-btn {
@@ -378,6 +379,84 @@ if(isset($_POST['submit'])){
                  margin: auto;
                  line-height: 33px;
 
+=======
+
+            }
+            .signup-btn {
+                 border-radius: 5px;
+                 background: #3B1F9E;
+                 width: 31%;
+                 font-weight: bold;
+                 height: 65px !important;
+                 width: 500px !important;
+                 font-size: 24px;
+                 color: #ffffff;
+                 margin-bottom: 30px;
+                 margin-left: 10px;
+                 border-radius: 42px;
+
+             }
+             .btn-grp {
+                margin-bottom: 10px !important;           
+                padding-top: 30px;
+                margin-left: 140px; 
+            }
+             .facebook {
+                    margin-bottom: 20px;
+                    height: 65px !important;
+                 width: 500px !important;
+                 border-radius: 42px;
+             }
+             .google {
+                height: 65px !important;
+                 width: 500px !important;
+                 border-radius: 42px;
+             }
+             .title {
+                text-align: center;
+             }
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px){
+            body {
+                 font-family: 'Rubik', sans-serif;
+                 margin: 36px 70px;
+                 background: #E5E5E5;
+             }
+             
+             .form-control {
+                 border: 1px solid #C4C4C4;
+                 border-radius: 5px;
+                 height: 70px !important;
+                 width: 500px !important;
+                 margin-bottom: 10px;
+                 padding: 30px 25px 25px 25px ;
+                 font-style: normal;
+                 font-weight: 600px;
+                 font-size: 20px;
+                 line-height: 33px;
+                 color: #C4C4C4;
+                 margin-left: -20px;
+             }
+             
+             form {
+                margin-left: auto;
+             }
+             .signup-btn {
+                 border-radius: 5px;
+                 background: #3B1F9E;
+                 width: 31%;
+                 font-weight: bold;
+                 height: 70px !important;
+                 width: 500px !important;
+                 font-size: 24px;
+                 color: #ffffff;
+                 margin-bottom: 30px;
+                 margin-left: -1px;
+                 border-radius: 42px;
+                 margin: auto;
+                 line-height: 33px;
+
+>>>>>>> parent of c5f176a... made changes to policy page
              }
              .form-align {
                 margin: auto !important;
@@ -629,6 +708,7 @@ if(isset($_POST['submit'])){
                     </p>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div class="col-sm-6 text-center">           
                   <ul class="list-inline text-center mt-3 pl-3">  
                       <li class="list-inline-item">
@@ -646,6 +726,8 @@ if(isset($_POST['submit'])){
                       
                     </ul>
               </div>
+=======
+>>>>>>> parent of c5f176a... made changes to policy page
 =======
 >>>>>>> parent of c5f176a... made changes to policy page
             </div>
