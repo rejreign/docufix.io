@@ -1,3 +1,6 @@
+<?php
+  include 'controller.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,6 +17,11 @@
         <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="css/main.css" rel="stylesheet" />
+
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
         <title>DOCUFIX</title>
     </head>
     <body>
@@ -22,7 +30,7 @@
                 <!--Header-->
                  <header>
           <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
-            <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" id="image"></a>
+            <a class="navbar-brand px-sm-5 ml-3" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" id="image"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -37,20 +45,40 @@
                     Tools
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-justify" href="fileUpload.html">Compare files</a>
-                    <a class="dropdown-item text-justify" href="grammarChecker.html">Grammar Check</a>
-                    <a class="dropdown-item text-justify" href="fileDuplicate.html">Duplicates Check</a>
+                    <a class="dropdown-item text-justify" href="fileUpload.php">Compare files</a>
+                    <a class="dropdown-item text-justify" href="grammarChecker.php">Grammar Check</a>
+                    <a class="dropdown-item text-justify" href="fileDuplicate.php">Duplicates Check</a>
                   </div>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-center" href="teampage.html">Our Team</a>
                 </li>
-                <li class="nav-item">
+                <?php
+                  if(!isset($_SESSION['login_user'])){
+                  echo '
+                  <li class="nav-item">
                     <a class="nav-link text-center" href="login.php">Login</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-center" href="signup.php">Get Started</a>
                 </li>
+                  ';
+
+
+                }
+                else
+                {
+                    echo '
+                  <li class="nav-item">
+                    <a class="nav-link text-center" href="profile.php">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="logout.php">logout</a>
+                </li>
+                  ';
+                }
+                ?>
+                
                 
               </ul>
             </div>
@@ -65,9 +93,9 @@
             <li><a href="#">About us</a></li>
             <li><a href="#">Tools<i class="fas fa-caret-down"></i></a>
               <ul>
-                <li><a href="https://docufix.io/fileUpload.html">Compare files</a></li>
-                <li><a href="https://docufix.io/grammarChecker.html">Grammar Check</a></li>
-                <li><a href="https://docufix.io/fileDuplicate.html">Duplicates Check</a></li>
+                <li><a href="https://docufix.io/fileUpload.php">Compare files</a></li>
+                <li><a href="https://docufix.io/grammarChecker.php">Grammar Check</a></li>
+                <li><a href="https://docufix.io/fileDuplicate.php">Duplicates Check</a></li>
                 <li><a href="plagiarismChecker.html">Plagiarism Check</a></li>
                 <li><a href="https://docufix.io/paraphrase.html">Paraphrasing tool</a></li>
               </ul>
@@ -86,8 +114,8 @@
                     <p>Compare documents content and find out the differences in each content of the files without much stress</p>
                 </div>
                 <div data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">
-                    <button class="b-btn comp-btn"><a href="./fileUpload.html">Compare files</a></button>
-                    <button class="b-btn dup-btn"><a href="./fileDuplicate.html">Check duplicates</a></button>
+                    <button class="b-btn comp-btn"><a href="./fileUpload.php">Compare files</a></button>
+                    <button class="b-btn dup-btn"><a href="./fileDuplicate.php">Check duplicates</a></button>
                 </div>
             </div>
     
@@ -107,8 +135,8 @@
                   <div class="feature-content-asset">
                     <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1573037501/Plagiarism_s3zf2l.png" alt="Plaigiarism" />
                   </div>
-                  <h2>Plagiarism Checker</h2>
-                  <p>Plagiarism checker detects plaigiarism in your text and checks for other writing issues. Our plagiarism checker flags specific sentences and provides reference information about the source, calculate an overall orginality score for your document. So you don't need to worry we have you covered.</p>
+                  <h2>Grammer Checker</h2>
+                  <p>Docufix grammar checker corrects over 100 types of grammar and spelling mistakes, including verbs, nouns, pronouns, prepositions, and more.  In offering you advanced correction software, Docufix allows you to improve the quality of your writing and master English pronunciation.</p>
               </div>
               <div class="feature-content-text feat-2" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" data-aos-easing="ease-in-out">
                   <div class="feature-content-asset">
@@ -224,37 +252,37 @@
             <div class="testimonials-wrapper" data-aos="fade-left" data-aos-duration="3000">
               <div class="testimonials">
                 <i class="fa fa-quote-left"></i>
-                <p>Moving fluff at the edge of forever Orion's sword cosmos gathered by gravity laws of physics. Star stuff hervesting light.</p>
+                <p>Nice user interface and experience. Very detailed to the core and simple to use. Nice work guys. This one of the best websites I use in checking for duplicates in my files and text.</p>
 
                 <hr>
 
                 <div class="testimonials-img">
-                  <img src="https://res.cloudinary.com/dzwnhcpep/image/upload/v1571947889/Car%20Park/Ellipse_1_q0de4l.png" alt="" />
-                  <cite title="Source Title">Mohamed Nady</cite>
+                  <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1573172807/kuic_g5u0hr.jpg" alt="" />
+                  <cite title="Source Title">Kinsley Umujeyan</cite>
                 </div>
               </div>
 
               <div class="testimonials">
                 <i class="fa fa-quote-left"></i>
-                <p>Science kindling the energy hidden in matter astonishment birth of brilliant sysntheses rings of Uranus. Stirred by starlight descended.</p>
+                <p>Great tools! Very useful tools for our daily activities, we all know the importance of this, despite the advances in technology; this tool is still the best form of checking documents.</p>
 
                 <hr>
 
                 <div class="testimonials-img">
-                  <img src="https://res.cloudinary.com/dzwnhcpep/image/upload/v1571947851/Car%20Park/Ellipse_1_1_vbpw76.png" alt="" />
-                  <cite title="Source Title">Mohamed Nady</cite>
+                  <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1573171975/martini_v0hc3i.jpg" alt="" />
+                  <cite title="Source Title">Martini Mabifa</cite>
                 </div>
               </div>
 
               <div class="testimonials">
                 <i class="fa fa-quote-left"></i>
-                <p>Science kindling the energy hidden in matter astonishment birth of brilliant sysntheses rings of Uranus. Stirred by starlight descended.</p>
+                <p>Science kindling the energy hidden in matter astonishment birth of brilliant sysntheses rings of Uranus. Stirred by starlight descended. Good job to the team that built this lovely app</p>
 
                 <hr>
 
                 <div class="testimonials-img">
-                  <img src="https://res.cloudinary.com/dzwnhcpep/image/upload/v1571947866/Car%20Park/Ellipse_1_2_p3rw3q.png" alt="" />
-                  <cite title="Source Title">Mohamed Nady</cite>
+                  <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1573171976/cross_ptkarx.png" alt="" />
+                  <cite title="Source Title">Isuma Chidera</cite>
                 </div>
               </div>
             </div>
@@ -264,12 +292,15 @@
 
         <!-- News Letter Starts -->
         <div class="news-wrapper">
-          <div class="news-content">
+          <div class="news-content">    
+            <form id="newsForm" action="newsletter.php" method="POST">
+              	<p  id="success" class="txt"> </p>
             <h2>subscribe to our newsletter</h2>
             <div class="news-input">
-            <input type="email" placeholder="Enter your email address here" required />
-              <button><a href="#">Submit</a></button>
+            <input type="email" name="mail" placeholder="Enter your email address here" required />
+              <button type="submit" name="submit" class="btn btn-default">Submit</button>
             </div>
+          <form>
           </div>
         </div>
         <!-- News Letter Ends -->
@@ -279,7 +310,7 @@
           <div class="container mt-3"><hr>
             <div class="row">
                 <div class="col-sm-6" id="docufix">
-                    <a class="navbar-brand  text-justify" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+                    <a class="navbar-brand  text-justify" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
                     <p class="text-justify">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
                 </div>
               <div class="col-sm-6 text-center">           
@@ -309,10 +340,50 @@
         <!-- FOOTER ENDS -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="js/main.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script>
+       
+
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+  var delay = 2000;
+  $("#newsForm").submit(function(e){
+    e.preventDefault();
+
+    var email = $('#mail').val();
+    if (email == ''){
+      $('.txt').html('<span> Email field is not suppose to be empty</span>');
+    $('#mail').focus();
+    return false;
+    }
+    $('#success').html('');
+    var values = $(this).serialize();
+
+    $.ajax ({
+
+
+      url: "newsletter.php",
+      type:"POST",
+      data: $(this).serialize(),
+      beforeSend: function(){
+        $('.txt').html(
+          '<span style="color:green"><img src="programming.gif" width="25" height="25"/>  Wait a sec, processing... </span>'
+        );
+      }
+    }).done (function (data){
+      setTimeout(function(){
+        $('.txt').html(data);
+        $("#newsForm").trigger("reset");
+      }, delay);
+    });
+  });
+});
+
+
           var SCROLLING_NAVBAR_OFFSET_TOP = 100;
           $(window).on("scroll", function() {
             var $navbar = $(".navbar");

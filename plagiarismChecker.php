@@ -39,7 +39,7 @@
                     Tools
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-justify" href="fileUpload.html">Compare files</a>
+                    <a class="dropdown-item text-justify" href="fileUpload.php">Compare files</a>
                     <a class="dropdown-item text-justify" href="grammarChecker.php">Grammar Check</a>
                     <a class="dropdown-item text-justify" href="fileDuplicate.php">Duplicates Check</a>
                     <a class="dropdown-item text-justify" href="plagiarismChecker.php">Plagiarism Check</a>
@@ -89,8 +89,8 @@
               <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 other mr-5 pt-5 px-4 align-items-end">
                   <h5>Other Tools:</h5>
                   <div class="row justify-content-around button mt-4">
-                     <a href="grammarChecker.html" class="btn col-5 " role="button">Grammar check</a>
-                    <a href="fileDuplicate.html" class="btn col-6 " role="button">Duplicates check</a>
+                     <a href="grammarChecker.php" class="btn col-5 " role="button">Grammar check</a>
+                    <a href="fileDuplicate.php" class="btn col-6 " role="button">Duplicates check</a>
                   </div>
               </div>
           </div>
@@ -125,10 +125,10 @@
                           <div class="input-group-prepend">
                             <button class="btn btn-url" type="button">@</button>
                           </div>
-                          <input type="text" class="form-control" placeholder="url" name="url"> 
-                        </div>
-                        <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
-                         <input type="submit" class="btn btn-primary" value="Check!">
+                          <textarea type="text" name="url" class="form-control rounded-0" id="FormControlTextarea" rows="1" placeholder="url" maxlength="100" ></textarea>
+                          <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
+                           <input type="submit" class="btn btn-primary" value="Check!">
+                          </div>
                         </div>
                       </form>
                     </div>

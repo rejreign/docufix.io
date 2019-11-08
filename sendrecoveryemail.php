@@ -1,3 +1,7 @@
+<?php
+                 //include your class file
+                    include 'controller.php';
+?>
 <!DOCTYPE html>
     <html lang="en">
 
@@ -466,7 +470,7 @@
             <div class="row   ">
                 <div class="col-sm-12 bar justify-content-between">
                     <div class="col-lg-4 col-sm-3">
-                        <a class="navbar-brand  " href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image" width="75"  height="13"></a>
+                        <a class="navbar-brand  " href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image" width="75"  height="13"></a>
                     </div>
                    
                </div>
@@ -485,11 +489,28 @@
                 </div>
             </div>
                 
-            <form class="form-align" method="POST" action="">
+            <form class="form-align" method="POST" action="sendrecoveryemail.php">
 
                 <div class="form-group col-md-4 col-lg-8">
                     <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email address" id="emailAddress" name="email"  data-toggle="tooltip" data-placement="bottom" title="Please enter a your Email Address" required><span class="error"></span>
                 </div>
+                                  <?php
+
+                                  if(isset($_POST['submit'])){
+                                   $email=$_POST['email'];
+                              
+
+                                   //instantiate your class
+                                   $passwordrecovery= new Controller();
+
+                                   //call the sendpasswordresetlink function. 
+                                   $status=$passwordrecovery->sendpasswordresetlink($email);
+                                   
+                                   //return feedback..
+                                   echo $status; 
+                               }
+
+                ?>
                 <button id="submitData" name="submit" type="submit" class="btn reset "  >
                             Send Reset Link
                         </button>

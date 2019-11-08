@@ -13,6 +13,7 @@
         <link rel="stylesheet" type="text/css" href="css/termsOfService.css">
         <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  
     </head>
     <body>
@@ -21,7 +22,7 @@
           <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top">
             <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572949531/docufix/Group_1_3_pqdphq.svg" alt="DOCUFIX" id="image"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <span><i class="fa fa-bars" aria-hidden="true" id="toggle"></i></span>
             </button>
           
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -55,104 +56,90 @@
     </header>
     <!--Main-->  
       
-    <main>
-          <section id="Introduction" class="text-center mb-3">
-            <div class="text-center">
-              
-              <h3>Frequently asked questions</h3>
-              
-          </section>
-              <div class="container" id="container">
-                <div class="row">
-                  <div class="col-sm-12">
-                   <div class="accordion mt-5" id="accordionExample">
+    <section class="section">
+          <div class="container mb-0">
+            <div class="text-center mb-2" id="Introduction">
+                <h2 class="text-9 text-center">Frequently asked questions</h2> 
                 
-              <div class="card">
-                <div class="card-header" id="headingTwo">
-                  <h2 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      How does Docufix work?
-                    </button>
-                  </h2>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                  <div class="card-body">
-                      <p>Docufix makes it easier for users to compare contents of thier documents and find out differences contained on each file without any stresss.</p>     
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header" id="headingThree">
-                  <h2 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      How can I compare my documents?
-                    </button>
-                  </h2>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                  <div class="card-body">
-                      <p>You can compare your documents by clicking on choose file, then locate where the documents is on your phone/computer then click on upload, then wait for seconds for the result to load, then you are good to go.</p> 
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                  <div class="card-header" id="headingFour">
-                    <h2 class="mb-0">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                          What type of documents does Docufix support?
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <p>Docufix currently support .TXT, .PDF, .DOCX, .JSON, .CSV, .XML and our engineers are working tirelessly in adding more formarts soon.</p>
-                      
-                    </div>
-                  </div>
-                </div>
+            </div>
+             
+          <div class="row">
+            <div class="col-sm-12 py-3 mx-auto">
+              <div id="termsOfService" class="accordion accordion-alternate arrow-right">
                 <div class="card">
-                    <div class="card-header" id="headingFive">
-                      <h2 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            Do I need to download or install anything to use your service?
-                        </button>
-                      </h2>
-                    </div>
-                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                      <div class="card-body">
-                          <p>No. This is a web-based service -- you do NOT download anything. All processing takes place on our server and the results are displayed in your browser.</p> 
-                      </div>
-                    </div>
+                  <div id="heading1" class="card-header">
+                    <h5 class="mb-0">
+                      <a href="#" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1" class="collapsed">How does Docufix work?</a>
+                    </h5>
+                  </div> 
+                      <div id="collapse1" aria-labelledby="heading1" data-parent="#termsOfService" class="collapse">
+                        <div class="card-body px-5 py-2">
+                          <p>Docufix makes it easier for users to compare contents of thier documents, find out differences contained in documents, remove duplicates and check for grammatical errors.</p>        
                   </div>
-                  <div class="card">
-                      <div class="card-header" id="headingSix">
-                        <h2 class="mb-0">
-                          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                              How long does it take to compare documents?
-                          </button>
-                        </h2>
                       </div>
-                      <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-                          <p>This is an automated service, so the analysis is produced in real-time. It's unusual for you to wait more than one minute, and usually much less than that.</p>          
-                      
+                    </div> 
+                    <div class="card">
+                      <div id="heading2" class="card-header">
+                        <h5 class="mb-0">
+                          <a href="#" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2" class="collapsed">How can I compare my documents?</a>
+                        </h5>
+                      </div> 
+                      <div id="collapse2" aria-labelledby="heading2" data-parent="#termsOfService" class="collapse">
+                        <div class="card-body px-5 py-2">
+                          <p>Instructions on how to compare documents can be found on the Compare files page. Just click on instructions.</p>     
+                        </div>
+                      </div>
+                    </div> 
+                    <div class="card">
+                      <div id="heading3" class="card-header">
+                        <h5 class="mb-0">
+                          <a href="#" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3" class="collapsed">What type of documents does Docufix support?</a>
+                        </h5>
+                      </div> 
+                      <div id="collapse3" aria-labelledby="heading3" data-parent="#termsOfService" class="collapse">
+                        <div class="card-body px-5 py-2">
+                          <p>Docufix only supports file formats like .docx, .csv, .json, .xml .txt .pdf, .rtf, .odt, .html, .xpt, .ods, .xls, .epud, .css and .dta</p>
+                      </div>
+                    </div> 
+                    <div class="card">
+                      <div id="heading4" class="card-header">
+                        <h5 class="mb-0">
+                          <a href="#" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4" class="collapsed">Do I need to download or install anything to use your service?</a>
+                        </h5>
+                      </div> 
+                      <div id="collapse4" aria-labelledby="heading4" data-parent="#termsOfService" class="collapse">
+                        <div class="card-body px-5 py-2"> 
+                          <p>No. This is a web-based service -- you do NOT download anything. All processing takes place on our server and the results are displayed in your browser.</p>
+                        </div>
+                      </div>
+                    </div> 
+                    <div class="card">
+                      <div id="heading5" class="card-header">
+                        <h5 class="mb-0">
+                          <a href="#" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5" class="collapsed"> How long does it take to compare documents?</a>
+                        </h5>
+                      </div> 
+                      <div id="collapse5" aria-labelledby="heading5" data-parent="#termsOfService" class="collapse">
+                        <div class="card-body px-5 py-2">
+                          <p>This is an automated service, so the analysis is produced in real-time. It's unusual for you to wait more than one minute, and usually much less than that.</p> 
+                        </div>
                       </div>
                     </div>
                     <div class="card">
-                        <div class="card-header" id="headingSeven">
-                          <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                How can I print or download a copy of the result?
-                            </button>
-                          </h2>
-                        </div>
-                        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
-                          <div class="card-body">
-                              <p>The results page includes a printable report link. Depending on your computer or device, you may be able to print this to a PDF file.</p>         
-                       
+                        <div id="heading6" class="card-header">
+                          <h5 class="mb-0">
+                            <a href="#" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6" class="collapsed">How can I print or download a copy of the result?</a>
+                          </h5>
+                        </div> 
+                        <div id="collapse6" aria-labelledby="heading6" data-parent="#termsOfService" class="collapse">
+                          <div class="card-body px-5 py-2">
+                              <p>The results page includes a printable report link. Depending on your computer or device, you may be able to print this to a PDF or docx file. You can also send your results to an email address</p>          
                           </div>
                         </div>
                       </div>
-        </main><br><br>
+                      
+          </section>    
+        </main>
 
  
 
@@ -172,9 +159,6 @@
                       <li class="list-inline-item">
                           <a class="text-center" href="faq.html">FAQs</a>
                         </li>
-                        <li class="list-inline-item">
-                        <a class="text-center" href="why-use-docufix.html">Why use Docufix</a>
-                      </li>
                         <li class="list-inline-item">
                             <a class="text-center" href="termsOfService.html">Terms and Conditions</a>
                           </li>

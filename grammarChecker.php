@@ -1,4 +1,16 @@
+<?php
+   
+   include 'controller.php';
 
+ 
+  if(!isset($_SESSION['login_user'])){
+  
+  header("location: login.php?redirect=grammarChecker.php");
+      
+}
+
+
+?>
 		
     <!DOCTYPE html>
     <html lang="en">
@@ -157,7 +169,7 @@
 
     <header>
           <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
-            <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" id="image"></a>
+            <a class="navbar-brand px-sm-5 ml-3" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" id="image"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -172,20 +184,39 @@
                     Tools
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-justify" href="fileUpload.html">Compare files</a>
-                    <a class="dropdown-item text-justify" href="grammarChecker.html">Grammar Check</a>
-                    <a class="dropdown-item text-justify" href="fileDuplicate.html">Duplicates Check</a>
+                    <a class="dropdown-item text-justify" href="fileUpload.php">Compare files</a>
+                    <a class="dropdown-item text-justify" href="grammarChecker.php">Grammar Check</a>
+                    <a class="dropdown-item text-justify" href="fileDuplicate.php">Duplicates Check</a>
                   </div>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-center" href="teampage.html">Our Team</a>
                 </li>
-                <li class="nav-item">
+                 <?php
+                  if(!isset($_SESSION['login_user'])){
+                  echo '
+                  <li class="nav-item">
                     <a class="nav-link text-center" href="login.php">Login</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-center" href="signup.php">Get Started</a>
                 </li>
+                  ';
+
+
+                }
+                else
+                {
+                    echo '
+                  <li class="nav-item">
+                    <a class="nav-link text-center" href="profile.php">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="logout.php">logout</a>
+                </li>
+                  ';
+                }
+                ?>
                 
               </ul>
             </div>
@@ -243,8 +274,8 @@
           border: 1px solid rgba(222, 230, 234, 0.6);
           box-sizing: border-box;">
                   <h5 class="mb-5" style="color: rgba(12, 10, 90, 0.8)">Other Tools:</h5>
-                  <a class="bt btn-sm rounded-pill font-weight-bold" style="color: rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)" href = "fileUpload.html">Compare files</a>
-                  <a class="bt btn-sm rounded-pill font-weight-bold mt-md-0 mt-2" style="color:rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)" href = "fileDuplicate.html">Check Duplicates</a>
+                  <a class="bt btn-sm rounded-pill font-weight-bold" style="color: rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)" href = "fileUpload.php">Compare files</a>
+                  <a class="bt btn-sm rounded-pill font-weight-bold mt-md-0 mt-2" style="color:rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)" href = "fileDuplicate.php">Check Duplicates</a>
                 </div>
       </div>
     <article>
@@ -382,7 +413,7 @@ box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05); height: 40px; color: white" class=
           <div class="container mt-3"><hr>
             <div class="row">
                 <div class="col-sm-6" id="docufix">
-                    <a class="navbar-brand  text-justify" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+                    <a class="navbar-brand  text-justify" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
                     <p class="text-justify">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
                 </div>
               <div class="col-sm-6 text-center">           

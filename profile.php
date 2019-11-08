@@ -1,9 +1,12 @@
 <?php
           session_start();
+          
           if (!isset($_SESSION['login_user'])) {
               header('Location: login.php');
               exit();
          }
+         
+              
    ?>
 
 
@@ -30,7 +33,7 @@
 <body class="profile-body"> 
   <div class="container-fluid profile-box my-5 mx-90 mx-auto">  
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572602189/docufix/Docufix_Logo_pzbbzi.png" alt="logo" class="logo-img img-fluid"></a>
+      <a class="navbar-brand" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572602189/docufix/Docufix_Logo_pzbbzi.png" alt="logo" class="logo-img img-fluid"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -38,38 +41,39 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Dashboard</a>
+            <a class="nav-link" href="profile.php">Dashboard</a>
           </li>
           <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Tools
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-justify" href="fileUpload.html">Compare files</a>
-                    <a class="dropdown-item text-justify" href="grammarChecker.html">Grammar Check</a>
-                    <a class="dropdown-item text-justify" href="fileDuplicate.html">Check for Duplicates</a>
+                    <a class="dropdown-item text-justify" href="fileUpload.php">Compare files</a>
+                    <a class="dropdown-item text-justify" href="grammarChecker.php">Grammar Check</a>
+                    <a class="dropdown-item text-justify" href="fileDuplicate.php">Check for Duplicates</a>
                   </div>
             </li>
 
           <!-- <li class="nav-item">
-            <a class="nav-link" href="index.html">Logout</a>
+            <a class="nav-link" href="index.php">Logout</a>
           </li> -->
 
           <li class="nav-item"> 
-               <?php  if(isset($_GET['logout']))  {  
-                      session_destroy();  
-                      unset($_SESSION['username']); 
-                    }  
-                ?>
-            <a class="nav-link" href="index.html" name="logout" >Logout</a>
+             
+            <a class="nav-link" href="logout.php" name="logout" >Logout</a>
             </li>
 
           <li class="nav-item">
             <a class="nav-link" href="/dashboard">
-                <div class="profile-circle">M.X</div>
+                <div class="profile-circle">
+                  <?php
+                 echo substr($_SESSION['firstname'], 0, 1).'.'.substr($_SESSION['lastname'], 0, 1);
+                 ?>
+
+                </div>
             </a>
           </li>
         </ul>
@@ -80,36 +84,46 @@
         <section class="col-3 pr-3 userprofile-col">
             <div class = "profile-info-bloc p-0">
             <p class="small-spaced-text p-0">Profile Information</p>
-            <h5>Subscription <span class="prof-btn mr-2 p-bloc-btn">Basic Plan</span></h5>
+            <h5>Subscription <span class="prof-btn mr-2 p-bloc-btn">Free Plan</span></h5>
             <p class="m-0 font-nine">Duration: Forever</p>
             <p class="font-nine">Limit: 20mb/month upload</p>
             </div>
 
             <div class = "profile-info-bloc">
             <h5>Total Documents Analyzed</h5>
-             <span class="btn prof-btn mr-2 mt-4">3</span>
+             <span class="btn prof-btn mr-2 mt-4">0</span>
             </div>
 
             <div class = "profile-info-bloc">
             <h5 class="mb-4">Recently Analyzed Documents</h5>
 
-            <span class="btn prof-btn mb-4 mr-2 d-block">Document Title 1</span>
-            <span class="btn prof-btn mb-4 mr-2 d-block">Document Title 2</span>
-            <span class="btn prof-btn mb-4 mr-2 d-block">Document Title 3</span>
+            <span class="btn prof-btn mb-4 mr-2 d-block">No document Analyzed Yet</span>
+           
            </div>
             
         </section>
         <section class="col-9 pl-md-5 userprofile-col profile-details">
-            <h4 class="userprofile-name shaded-black"> <?= $_SESSION['name'] ?> </h4>
-            <p class="userprofile-plan medium-purple-text">Basic User</p>
+            <h4 class="userprofile-name shaded-black">
+            <?php
+            echo $_SESSION['firstname'].' '.$_SESSION['lastname'];
+
+            ?>
+
+             </h4>
+            <p class="userprofile-plan medium-purple-text">Free User</p>
             <p class="userprofile-date small-spaced-text">Date Registered <span> <?= $_SESSION['registered_date'] ?> </span></p>
             <button class="userprofile-changeplan btn prof-btn p-bloc-btn mr-2"><i class="fa fa-pencil" aria-hidden="true"></i> Change Plan</button>
-            <button class="userprofile-changeplan btn prof-btn p-bloc-btn"><i class="fa fa-lock" aria-hidden="true"></i>Change Password</button>
+            <a href="changepassword.php"><button class="userprofile-changeplan btn prof-btn p-bloc-btn"><i class="fa fa-lock" aria-hidden="true"></i>Change Password</button></a>
 
             <h6 class="shaded-black prof-about-title"><i class="fa fa-user" aria-hidden="true"></i> About</h6>
             <p class="small-spaced-text p-0">CONTACT INFORMATION</p>
             <div class="contact-info">
-            <p class="d-flex justify-content-between medium-text">Full Name <span class="medium-purple-text"> <?= $_SESSION['name'] ?> </span></p>
+            <p class="d-flex justify-content-between medium-text">Full Name <span class="medium-purple-text"> 
+              <?php
+            echo $_SESSION['firstname'].' '.$_SESSION['lastname'];
+
+            ?>
+             </span></p>
             <p class="d-flex justify-content-between medium-text">Email <span class="medium-purple-text"> <?= $_SESSION['login_user'] ?> </span></p>
             <!-- <p class="d-flex justify-content-between medium-text">Phone Number <span class="medium-purple-text">08034143461</span></p> -->
                   

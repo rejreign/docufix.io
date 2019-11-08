@@ -1,3 +1,15 @@
+<?php
+   
+   include 'controller.php';
+
+ 
+  if(!isset($_SESSION['login_user'])){
+  header("location: login.php?redirect=fileUpload.php");
+      
+}
+
+
+?>
 <!DOCTYPE html>
  <html lang="en">
     <head>
@@ -29,7 +41,7 @@
         <!--Header-->
         <div class="w3-container" >
             <div id="id01" class="w3-modal" >
-              <div class="w3-modal-content mb-2 mt-5 mt-md-0" style="max-width: 60%">
+              <div class="w3-modal-content mb-2 mt-5 mt-md-0" style="max-width: 100%">
                 <span onclick="document.getElementById('id01').style.display='none'"
                   class="w3-button w3-display-topright mb-0">&times;</span>
                   
@@ -75,7 +87,7 @@
           </div>
           <header>
           <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
-            <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" id="image"></a>
+            <a class="navbar-brand px-sm-5 ml-3" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" id="image"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -90,20 +102,40 @@
                     Tools
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-justify" href="fileUpload.html">Compare files</a>
-                    <a class="dropdown-item text-justify" href="grammarChecker.html">Grammar Check</a>
-                    <a class="dropdown-item text-justify" href="fileDuplicate.html">Duplicates Check</a>
+                    <a class="dropdown-item text-justify" href="fileUpload.php">Compare files</a>
+                    <a class="dropdown-item text-justify" href="grammarChecker.php">Grammar Check</a>
+                    <a class="dropdown-item text-justify" href="fileDuplicate.php">Duplicates Check</a>
                   </div>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-center" href="teampage.html">Our Team</a>
                 </li>
-                <li class="nav-item">
+                 <?php
+                  if(!isset($_SESSION['login_user'])){
+                  echo '
+                  <li class="nav-item">
                     <a class="nav-link text-center" href="login.php">Login</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-center" href="signup.php">Get Started</a>
                 </li>
+                  ';
+
+
+                }
+                else
+                {
+                    echo '
+                  <li class="nav-item">
+                    <a class="nav-link text-center" href="profile.php">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="logout.php">logout</a>
+                </li>
+                  ';
+                }
+                ?>
+                
                 
               </ul>
             </div>
@@ -132,8 +164,8 @@
                         <div class="mx-auto" style="border: 1px solid rgba(222, 230, 234, 0.6); background: #F6F8F9">
                           <div class="p-4">
                               <h5 class="pb-4 font-weight-bold" style="color: rgba(12, 10, 90, 0.8)">Other Tools:</h5>
-                              <a href="grammarChecker.html" class="btn btn-sm rounded-pill font-weight-bold" style="color: rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Grammar check</a>
-                                          <a href="fileDuplicate.html" class="btn btn-sm rounded-pill font-weight-bold" style="color:rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Duplicates check</a>
+                              <a href="grammarChecker.php" class="btn btn-sm rounded-pill font-weight-bold" style="color: rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Grammar check</a>
+                                          <a href="fileDuplicate.php" class="btn btn-sm rounded-pill font-weight-bold" style="color:rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Duplicates check</a>
                                           <div class="btn float-right" style="cursor: pointer;color: rgba(12, 10, 90, 0.8)"  onclick="instruction()"> Instructions</div>
                           </div>
                        
@@ -319,7 +351,7 @@
                             </div>
                         </div>
                         <div class="text-center col-md-12 m-3">
-                                <button value="compare" class="btn font-weight-bold  rounded-pill px-5"
+                                <button name="submit" value="compare" class="btn font-weight-bold  rounded-pill px-5"
                                   style="background-color:   #EEEEEE;color:#333333;" type="submit" onclick="buttonCompareClicked();"> Compare</button>
                               </div>
                     </div>
@@ -446,9 +478,6 @@
                        <select type="select" id="email" name="select">
                         <option value="txt" selected>select doc type</option>
                         <option value=".txt"> .txt </option>
-                        <option value=".pdf"> .pdf</option>
-                        <option value=".docx"> .docx </option>
-                        <option value=".epub">.epub </option>
                         <option value=".doc"> .doc</option>
                        </select>
                        <input type="email" id="email" name="mail" placeholder="Please input your email Address..." required>
@@ -518,7 +547,7 @@
           <div class="container mt-3"><hr>
             <div class="row">
                 <div class="col-sm-6" id="docufix">
-                    <a class="navbar-brand  text-justify" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+                    <a class="navbar-brand  text-justify" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
                     <p class="text-justify">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
                 </div>
               <div class="col-sm-6 text-center">           
@@ -1153,7 +1182,7 @@ $(window).on("scroll", function() {
           
               twitterShare.onclick = function (e) {
                 e.preventDefault();
-                var twitterWindow = window.open('https://twitter.com/intent/tweet?text=Hey! I just compared my files for similarities on&url=http://docufix.ga/fileUpload.html&###', 'twitter-popup', 'height=350,width=600');
+                var twitterWindow = window.open('https://twitter.com/intent/tweet?text=Hey! I just compared my files for similarities on&url=http://docufix.ga/fileUpload.php&###', 'twitter-popup', 'height=350,width=600');
                 if (twitterWindow.focus) { twitterWindow.focus(); }
                 return false;
               }
@@ -1325,10 +1354,8 @@ $(window).on("scroll", function() {
       }).done (function(data) {
           
         setTimeout(function() {
+          $("#form").trigger("reset");
                 $('.msgbox').html(data);
-                $('#closeSend').hide();
-                $('#ta').hide();
-                $('#email').hide();
             }, delay);
         });
      
