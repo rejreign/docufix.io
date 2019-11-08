@@ -1,3 +1,6 @@
+<?php
+  include 'controller.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -42,12 +45,31 @@
                 <li class="nav-item">
                   <a class="nav-link text-center" href="teampage.html">Our Team</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link text-center" href="login.php">Login</a>
+               <?php
+                  if(!isset($_SESSION['login_user'])){
+                  echo '
+                  <li class="nav-item">
+                    <a class="nav-link text-center" href="login.php">Login</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-center" href="signup.php">Get Started</a>
                 </li>
+                  ';
+
+
+                }
+                else
+                {
+                    echo '
+                  <li class="nav-item">
+                    <a class="nav-link text-center" href="profile.php">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="logout.php">logout</a>
+                </li>
+                  ';
+                }
+                ?>
                 
               </ul>
             </div>
@@ -115,16 +137,12 @@
                       <li class="list-inline-item">
                           <a class="text-center" href="faq.html">FAQs</a>
                         </li>
-                        <li class="list-inline-item">
-                        <a class="text-center" href="why-use-docufix.html">Why use Docufix</a>
-                      </li>
-                        <li class="list-inline-item">
-                            <a class="text-center" href="termsOfService.html">Terms and Conditions</a>
-                          </li>
-                      <li class="list-inline-item">
+                       <li class="list-inline-item">
                           <a class="text-center" href="privacy.html">Privacy Policy</a>
-                      </li>
-                      
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="text-center" href="termsOfService.html">Terms of Service</a>
+                          </li>
                     </ul>
               </div>
             </div>

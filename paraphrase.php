@@ -20,7 +20,7 @@
            <!--Header-->
         <header>
           <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
-            <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+            <a class="navbar-brand px-sm-5 ml-3" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -28,18 +28,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto px-5">
                 <li class="nav-item">
-                  <a class="nav-link text-center" href="about_us.html">About</a>
+                  <a class="nav-link text-center" href="about_us.php">About</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Tools
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-justify" href="fileUpload.html">Compare files</a>
-                    <a class="dropdown-item text-justify" href="grammarChecker.html">Grammar Check</a>
-                    <a class="dropdown-item text-justify" href="fileDuplicate.html">Duplicates Check</a>
-                    <a class="dropdown-item text-justify" href="plagiarismChecker.html">Plagiarism Check</a>
-                    <a class="dropdown-item text-justify" href="paraphrase.html">Paraphrasing tool</a>
+                    <a class="dropdown-item text-justify" href="fileUpload.php">Compare files</a>
+                    <a class="dropdown-item text-justify" href="grammarChecker.php">Grammar Check</a>
+                    <a class="dropdown-item text-justify" href="fileDuplicate.php">Duplicates Check</a>
+                    <a class="dropdown-item text-justify" href="plagiarismChecker.php">Plagiarism Check</a>
+                    <a class="dropdown-item text-justify" href="paraphrase.php">Paraphrasing tool</a>
                   </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -47,20 +47,38 @@
                     Support
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-justify" href="faq.html">FAQ</a>
-                    <a class="dropdown-item text-justify" href="contact.html">Contact Us</a>
-                    <a class="dropdown-item text-justify" href="why-use-docufix.html">Why use Docufix</a>
-                    <a class="dropdown-item text-justify" href="privacy.html">Privacy Policy</a>
-                    <a class="dropdown-item text-justify" href="termsOfService.html">Terms of Service</a>
+                    <a class="dropdown-item text-justify" href="faq.php">FAQ</a>
+                    <a class="dropdown-item text-justify" href="contact.php">Contact Us</a>
+                    <a class="dropdown-item text-justify" href="why-use-docufix.php">Why use Docufix</a>
+                    <a class="dropdown-item text-justify" href="privacy.php">Privacy Policy</a>
+                    <a class="dropdown-item text-justify" href="termsOfService.php">Terms of Service</a>
                   </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-center" href="teampage.html">Our Team</a>
+                <?php
+                  if(!isset($_SESSION['login_user'])){
+                  echo '
+                  <li class="nav-item">
+                    <a class="nav-link text-center" href="login.php">Login</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-center" href="login.php">Login</a>
+                  <a class="nav-link text-center" href="signup.php">Get Started</a>
                 </li>
-                
+                  ';
+
+
+                }
+                else
+                {
+                    echo '
+                  <li class="nav-item">
+                    <a class="nav-link text-center" href="profile.php">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="logout.php">logout</a>
+                </li>
+                  ';
+                }
+                ?>
               </ul>
             </div>
           </nav>
@@ -135,16 +153,16 @@
                             <a class="text-center" href="#">&copy; 2019 Copyright Docufix</a>
                           </li>
                           <li class="list-inline-item">
-                            <a class="text-center" href="faq.html">FAQ</a>
+                            <a class="text-center" href="faq.php">FAQ</a>
                           </li>
                           <li class="list-inline-item">
-                            <a class="text-center" href="contact.html">Contact us</a>
+                            <a class="text-center" href="contact.php">Contact us</a>
                           </li>
                           <li class="list-inline-item">
-                              <a class="text-center" href="privacy.html">Privacy Policy</a>
+                              <a class="text-center" href="privacy.php">Privacy Policy</a>
                           </li>
                           <li class="list-inline-item">
-                            <a class="text-center" href="termsOfService.html">Terms of Service</a>
+                            <a class="text-center" href="termsOfService.php">Terms of Service</a>
                           </li>
                         </ul>
                   </div>

@@ -1,3 +1,6 @@
+<?php
+  include 'controller.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,42 +20,61 @@
 </head>
 <body>
     <!--Header-->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
-        <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" id="image"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto px-5">
-            <li class="nav-item">
-              <a class="nav-link text-center" href="about_us.html">About</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Tools
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item text-justify" href="fileUpload.html">Compare files</a>
-                <a class="dropdown-item text-justify" href="grammarChecker.html">Grammar Check</a>
-                <a class="dropdown-item text-justify" href="fileDuplicate.html">Duplicates Check</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-center" href="teampage.html">Our Team</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-center" href="login.php">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-center" href="signup.php">Get Started</a>
-            </li>
-            
-          </ul>
-        </div>
-      </nav>
-</header>
+     <header>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top scrolling-navbar" id="nav">
+            <a class="navbar-brand" href="index.php" id="logo">
+              <img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" class="image">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="btn">
+              <span><i class="fa fa-bars" aria-hidden="true" id="toggle"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav text-center ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="about_us.php">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Tools
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="fileupload.php">Compare files</a>
+                    <a class="dropdown-item" href="grammarChecker.php">Grammar Check</a>
+                    <a class="dropdown-item" href="filedelimiter.php">Check for duplicates</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="teampage.php">Our Team</a>
+                </li>
+                  <?php
+                  if(!isset($_SESSION['login_user'])){
+                  echo '
+                  <li class="nav-item">
+                    <a class="nav-link text-center" href="login.php">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="signup.php">Get Started</a>
+                </li>
+                  ';
+
+
+                }
+                else
+                {
+                    echo '
+                  <li class="nav-item">
+                    <a class="nav-link text-center" href="profile.php">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="logout.php">logout</a>
+                </li>
+                  ';
+                }
+                ?>
+              </ul>
+            </div>
+          </nav>
+        </header>
     <!-- Disclaimer area -->
     <main>
         <section id="Introduction" class="text-center mb-3">
@@ -97,7 +119,7 @@
                         (including, but not limited to, negligence), or otherwise exceed the amount paid by you, if any, for accessing this site.
                     </p>
                     <div class="text-left"> 
-                      <a href="index.html" class="btn  px-5  btn-outline-dark text-center" style="font-weight: bold;margin-bottom:20px;">Get Started</a>
+                      <a href="index.php" class="btn  px-5  btn-outline-dark text-center" style="font-weight: bold;margin-bottom:20px;">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -145,7 +167,7 @@
                       In no event shall Docufix total liability to you for all damages, losses, and causes of action whether in contract, tort 
                       (including, but not limited to, negligence), or otherwise exceed the amount paid by you, if any, for accessing this site.
                   </p>
-                  <a href="signup.html">Get Started</a>
+                  <a href="signup.php">Get Started</a>
               </div>
               </div>
           </div>
@@ -158,26 +180,23 @@
       <div class="container"><hr>
         <div class="row mt-5">
             <div class="col-sm-6" id="docufix">
-                <a class="navbar-brand  text-justify" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+                <a class="navbar-brand  text-justify" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
                 <p class="text-justify">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
             </div>
           <div class="col-sm-6 text-center">           
               <ul class="list-inline text-center mt-3 pl-3">  
                   <li class="list-inline-item">
-                    <a class="text-center" href="contact.html">Contact us</a>
+                    <a class="text-center" href="contact.php">Contact us</a>
                   </li>
                   <li class="list-inline-item">
-                      <a class="text-center" href="faq.html">FAQs</a>
+                      <a class="text-center" href="faq.php">FAQs</a>
                     </li>
                     <li class="list-inline-item">
-                    <a class="text-center" href="why-use-docufix.html">Why use Docufix</a>
-                  </li>
+                      <a class="text-center" href="privacy.php">Privacy Policy</a>
+                    </li>
                     <li class="list-inline-item">
-                        <a class="text-center" href="termsOfService.html">Terms and Conditions</a>
-                      </li>
-                  <li class="list-inline-item">
-                      <a class="text-center" href="privacy.html">Privacy Policy</a>
-                  </li>   
+                        <a class="text-center" href="termsOfService.php">Terms of Service</a>
+                      </li>   
                 </ul>
           </div>
         </div>
