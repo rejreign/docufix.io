@@ -15,6 +15,8 @@
         <link rel="stylesheet" type="text/css" href="css/header&footer.css">
         <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
         <script src="https://kit.fontawesome.com/75f59c3e4c.js" crossorigin="anonymous"></script>
         
         <style>
@@ -45,12 +47,6 @@
 
              }
              .login-section {
-                 /* margin: 0;
-                 position: absolute;
-                 top: 100%;
-                 left: 50%;
-                 -ms-transform: translate(-50%, -50%);
-                 transform: translate(-50%, -50%); */
                  margin-top: -50px;
              }
              p {
@@ -465,7 +461,7 @@
 
 
     <body class="">
-        <div class="container-fluid col-lg-12 col-sm- col-xs- page">
+        <div class="container-fluid col-lg-12 col-sm- col-xs- page animated finite pulse">
         <header class="">
             <div class="row   ">
                 <div class="col-sm-12 bar justify-content-between">

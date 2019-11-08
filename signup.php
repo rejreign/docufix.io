@@ -107,24 +107,24 @@ if(isset($_POST['submit'])){
         </div>
         <form method="POST" action="">
 
-            <div class="form-group">
+            <div class="">
                 <input type="text" id="name" name="firstname" placeholder="First Name" pattern="[a-zA-Z]{1,}" data-toggle="tooltip" data-placement="bottom" title="Enter Your First Name" required><span class="error"></span>
             </div>
 
-            <div class="form-group">
+            <div class="">
                 <input type="text" id="name" name="lastname" placeholder="Last Name"  pattern="[a-zA-Z]{1,}" data-toggle="tooltip" data-placement="bottom" title="Enter Your Last Name" required><span class="error"></span>
             </div>
 
-            <div class="form-group">
+            <div class="">
                 <input type="email" aria-describedby="emailHelp" placeholder="Your email address" id="emailAddress" name="email"  data-toggle="tooltip" data-placement="bottom" title="Please enter a valid Email Address" required><span class="error"></span>
             </div>
 
-            <div class="form-group">
+            <div class="">
                 <input type="password" name="password" id="password" class="form-control" placeholder="Your password" data-toggle="tooltip" data-placement="bottom"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
             </div>
 
-            <div class="form-group">
+            <div class="">
                 <input type="password" name="verify_password" id="confirmPassword" placeholder="Confirm password" data-toggle="tooltip" data-placement="bottom" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                 title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><span class="error"></span>
             </div>

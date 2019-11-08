@@ -129,7 +129,7 @@
         <span class="error"></span>
     </section>
     <footer id="footer">
-          <div class="container-fluid mt-3"><hr>
+          <div class="container mt-3"><hr>
             <div class="row">
                 <div class="col-sm-6" id="docufix">
                     <a class="navbar-brand  text-justify" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
