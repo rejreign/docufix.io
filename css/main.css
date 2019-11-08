@@ -668,4 +668,10 @@ a {
 .desktop-nav {
   background: #FAFAFA;
 }
+
+@media (max-width: 1000px) {
+  .feature-wrapper .feature-content {
+    width: 100% !important;
+  }
+}
 /*# sourceMappingURL=main.css.map */
