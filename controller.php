@@ -264,6 +264,9 @@
 					    if($status==1){
 					       $returnmessage="A Password reset Link has been sent to your email Address, Please proceed to your email to recover your account";       
 					                  }
+					    else{
+					    	echo "We ran into an Error";
+					    }
         	       }
         	    else{
         	    	$returnmessage="Email has not been registered!!!";

@@ -1,5 +1,7 @@
 <?php
-           
+                   
+
+                               
                     include('connect.php');
                     session_start();
 
@@ -28,7 +30,16 @@
                                     $_SESSION['login_id'] = $result['id'];
                                     $_SESSION['registered_date'] = $result['created_at'];
                                     // $_SESSION['plan'] = $result['plan']
-                                    header("location: profile.php");
+                                    if(isset($_GET['redirect'])){
+                                        $redirect= $_GET['redirect'];
+
+                                        header('location: '.$redirect.'');
+       
+                                      }
+                                      else{
+                                         header("location: profile.php");
+                                      }
+                                   
                                 }
                                 else { 
                                          $message = '<p class="text-warning">Invalid login credentials</p>';
@@ -654,7 +665,7 @@
             <div class="row   ">
                 <div class="col-sm-12 bar justify-content-between">
                     <div class="col-lg-4 col-sm-3">
-                        <a class="navbar-brand  "href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image" width="75"  height="13"></a>
+                        <a class="navbar-brand  "href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image" width="75"  height="13"></a>
                     </div>
                    
                </div>
