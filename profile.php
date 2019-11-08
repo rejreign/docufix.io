@@ -108,8 +108,13 @@
             <p class="userprofile-date small-spaced-text">Date Registered <span> <?= $_SESSION['registered_date'] ?> </span></p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <!--button class="userprofile-changeplan btn prof-btn p-bloc-btn mr-2"><i class="fa fa-pencil" aria-hidden="true"></i> Change Plan</button-->
             <a href="changepassword.php"><button class="userprofile-changeplan btn prof-btn p-bloc-btn"><i class="fa fa-lock" aria-hidden="true"></i>Change Password</button></a>
+=======
+            <button class="userprofile-changeplan btn prof-btn p-bloc-btn mr-2"><i class="fa fa-pencil" aria-hidden="true"></i> Change Plan</button>
+            <button class="userprofile-changeplan btn prof-btn p-bloc-btn"><i class="fa fa-lock" aria-hidden="true"></i>Change Password</button>
+>>>>>>> parent of c5f176a... made changes to policy page
 =======
             <button class="userprofile-changeplan btn prof-btn p-bloc-btn mr-2"><i class="fa fa-pencil" aria-hidden="true"></i> Change Plan</button>
             <button class="userprofile-changeplan btn prof-btn p-bloc-btn"><i class="fa fa-lock" aria-hidden="true"></i>Change Password</button>

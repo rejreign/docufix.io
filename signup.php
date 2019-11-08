@@ -303,6 +303,7 @@ if(isset($_POST['submit'])){
                 margin-left: -145px !important;
                 margin-bottom: 10px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             }
             .signup-btn {
@@ -594,6 +595,221 @@ if(isset($_POST['submit'])){
                  padding: 25px;
                  font-style: normal;.
 
+=======
+
+            }
+            .signup-btn {
+                 border-radius: 5px;
+                 background: #3B1F9E;
+                 width: 31%;
+                 font-weight: bold;
+                 height: 65px !important;
+                 width: 500px !important;
+                 font-size: 24px;
+                 color: #ffffff;
+                 margin-bottom: 30px;
+                 margin-left: 10px;
+                 border-radius: 42px;
+
+             }
+             .btn-grp {
+                margin-bottom: 10px !important;           
+                padding-top: 30px;
+                margin-left: 140px; 
+            }
+             .facebook {
+                    margin-bottom: 20px;
+                    height: 65px !important;
+                 width: 500px !important;
+                 border-radius: 42px;
+             }
+             .google {
+                height: 65px !important;
+                 width: 500px !important;
+                 border-radius: 42px;
+             }
+             .title {
+                text-align: center;
+             }
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px){
+            body {
+                 font-family: 'Rubik', sans-serif;
+                 margin: 36px 70px;
+                 background: #E5E5E5;
+             }
+             
+             .form-control {
+                 border: 1px solid #C4C4C4;
+                 border-radius: 5px;
+                 height: 70px !important;
+                 width: 500px !important;
+                 margin-bottom: 10px;
+                 padding: 30px 25px 25px 25px ;
+                 font-style: normal;
+                 font-weight: 600px;
+                 font-size: 20px;
+                 line-height: 33px;
+                 color: #C4C4C4;
+                 margin-left: -20px;
+             }
+             
+             form {
+                margin-left: auto;
+             }
+             .signup-btn {
+                 border-radius: 5px;
+                 background: #3B1F9E;
+                 width: 31%;
+                 font-weight: bold;
+                 height: 70px !important;
+                 width: 500px !important;
+                 font-size: 24px;
+                 color: #ffffff;
+                 margin-bottom: 30px;
+                 margin-left: -1px;
+                 border-radius: 42px;
+                 margin: auto;
+                 line-height: 33px;
+
+             }
+             .form-align {
+                margin: auto !important;
+
+             }
+             h3 {
+                padding-top: 30px;
+                font-weight: bold;
+             }
+             .page{
+                padding: 50px 50px ;
+                background-color: #ffffff;          
+                width: ;
+                height: 952px;
+             }
+             .btn-grp {
+                display: flex;
+                margin-bottom: 10px !important;
+                margin-left: -140px;
+                padding-top: 30px;
+
+             }
+             .google  {
+                margin-left: 10px;
+                border-radius: 42px;
+                width: 230px !important;
+
+             }
+             .facebook {
+                border-radius: 42px;
+                width: 230px !important;
+             }
+             .title{
+                margin-left: -24px !important;
+             }
+             .link {
+                font-size: 18px !important;
+                margin-left: 35px;
+             }
+         
+        }
+        @media (min-width: 1200px){
+            body {
+                 font-family: 'Rubik', sans-serif;
+                 margin: 36px auto;
+                 background: #E5E5E5
+             }
+             .link {
+                margin-left: 10vh; 
+             }
+             .form-control {
+                 border: 1px solid #C4C4C4;
+                 border-radius: 5px;
+                 height: 70px !important;
+                 width: 636px !important;
+                 margin-bottom: 10px;
+                 padding: 30px 25px 25px 25px ;
+                 font-style: normal;
+                 font-weight: 600px;
+                 font-size: 24px;
+                 line-height: 33px;
+                 color: #C4C4C4;
+                 margin-left: -3vh; ;
+             }
+             
+             .signup-btn {
+                 border-radius: 5px;
+                 background: #3B1F9E;
+                 width: 31%;
+                 font-weight: bold;
+                 height: 70px !important;
+                 width: 636px !important;
+                 font-size: 24px;
+                 color: #ffffff;
+                 margin-bottom: 30px;
+                 margin-left: 10vh;
+                 border-radius: 42px;
+                 margin: auto;
+
+             }
+             .page{
+                padding: 50px 50px ;
+                background-color: #ffffff;          
+                width: 1064px;
+                height: 952px;
+             }
+             .btn-grp {
+                display: flex;
+                margin-bottom: 30px !important;
+                margin-left: -23vh;
+                padding-top: 30px;
+
+             }
+             .google  {
+                margin-left: 40px;
+                height: 60px;
+                width: 250px;
+                border-radius: 42px;
+             }
+             .facebook{
+                height: 60px;
+                width: 250px;
+                border-radius: 42px;
+             }
+             h3 {
+                font-weight: bold;
+                margin-top: 5vh;
+
+             }
+             .signUP {
+                margin: 0px;
+             }
+             .title {
+                margin-left:-3vh !important;
+             }
+         .form-align {
+            margin: auto;
+         }
+        
+        }
+        
+             
+             
+             .bottom-ellipse {
+                 /* background: rgba(33, 89, 168, 0.05); */
+                 transform: rotate(-162.89deg);
+                 width: 668px;
+                 top: 300px;
+                 position: fixed;
+                 left: -55px;
+                 z-index: -99;
+             }
+             
+             input {
+                 padding: 25px;
+                 font-style: normal;.
+
+>>>>>>> parent of c5f176a... made changes to policy page
                  font-weight: normal;
                  font-size: 14px;
                  line-height: 17px;
@@ -709,6 +925,7 @@ if(isset($_POST['submit'])){
                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div class="col-sm-6 text-center">           
                   <ul class="list-inline text-center mt-3 pl-3">  
                       <li class="list-inline-item">
@@ -726,6 +943,8 @@ if(isset($_POST['submit'])){
                       
                     </ul>
               </div>
+=======
+>>>>>>> parent of c5f176a... made changes to policy page
 =======
 >>>>>>> parent of c5f176a... made changes to policy page
 =======

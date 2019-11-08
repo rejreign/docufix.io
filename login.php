@@ -653,6 +653,7 @@ if(isset($_POST['submit'])){
                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div class="col-sm-6 text-center">           
                   <ul class="list-inline text-center mt-3 pl-3">  
                       <li class="list-inline-item">
@@ -670,6 +671,8 @@ if(isset($_POST['submit'])){
                       
                     </ul>
               </div>
+=======
+>>>>>>> parent of c5f176a... made changes to policy page
 =======
 >>>>>>> parent of c5f176a... made changes to policy page
 =======
