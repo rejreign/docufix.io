@@ -425,11 +425,11 @@ box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05); height: 40px; color: white" class=
                           <a class="text-center" href="faq.html">FAQs</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="text-center" href="termsOfService.html">Terms and Conditions</a>
-                          </li>
-                      <li class="list-inline-item">
                           <a class="text-center" href="privacy.html">Privacy Policy</a>
-                      </li>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="text-center" href="termsOfService.html">Terms of Service</a>
+                          </li>
                       
                     </ul>
               </div>

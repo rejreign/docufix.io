@@ -322,11 +322,11 @@
                           <a class="text-center" href="faq.html">FAQs</a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="text-center" href="termsOfService.html">Terms and Conditions</a>
-                          </li>
-                      <li class="list-inline-item">
                           <a class="text-center" href="privacy.html">Privacy Policy</a>
-                      </li>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="text-center" href="termsOfService.html">Terms of Service</a>
+                          </li>
                       
                     </ul>
               </div>
