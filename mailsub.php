@@ -10,7 +10,7 @@
     
 $fname = $docName.$doctype;
 // echo $fname;
-$file= file_put_contents('alldocs/'.$fname, $text);
+//$file= file_put_contents('alldocs/'.$fname, $text);
 
 // $userEmail = mysqli_real_escape_string($conn, $email); 
 
@@ -69,15 +69,15 @@ $the_mailer->addAddress($email);
 $the_mailer-> isHTML(true);
 $the_mailer->Subject = "Compared Document";
 $the_mailer->Body = "Your document";
-$the_mailer->addAttachment('alldocs/'.$fname);
-echo $fname;
+$the_mailer->addStringAttachment($text, $fname);
+echo  $fname;
 if ($the_mailer->send()){
     echo '<p class="text-warning">Yepeeee. Email with attachement has been sent Successfully! Kindly check your mail!</p>';
-    unlink('alldocs/'.$fname);
+ 
 return true;
     } else{
         echo '<p class="text-warning" id="output">Email failed <a href="login.php">login</a></p>'.$the_mailer->ErrorInfo;
-        unlink('alldocs/'.$fname);
+      
         return false;
     }
 
