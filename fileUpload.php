@@ -118,7 +118,7 @@
           <a class="nav-link text-center" href="profile.php">Dashboard</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-center" href="logout.php">logout</a>
+        <a class="nav-link text-center" href="logout.php">Logout</a>
       </li>
         ';
       }

@@ -55,13 +55,22 @@ if(isset($_POST['submit'])){
                            $result = mysqli_query($conn , $sql);
                     if($result){
                                     $message .= '<div class="alert alert-success" role="alert">
-                                    Record Saved Successfully <button class="btn"><a href = "index.php">Home</a></button></div>';
+                                    Sign up successful <button class="btn"><a href = "index.php">Home</a></button></div>';
                                             echo ($message);
+
+                                            $_SESSION['login_user'] = $userEmail;
+                                            $_SESSION['loggedin'] = true;
+                                            $_SESSION['firstname'] = $result['firstname'];
+                                            $_SESSION['lastname'] = $result['lastname'];
+                                            $_SESSION['login_id'] = $result['id'];
+                                            $_SESSION['registered_date'] = $result['created_at'];
+
+                                            header("location: login.php");
 
                     }
                     else{
                         $message .= '<div class="alert alert-danger" role="alert">
-                        Record not Saved ' . mysqli_error($conn) . '<button class="btn"><a href = "index.php">Home</a></button>
+                        Sign up unsuccesful. ' . mysqli_error($conn) . '<button class="btn"><a href = "index.php">Home</a></button>
                         </div>';
                     
                     }
