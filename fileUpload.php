@@ -4,7 +4,7 @@
 
  
   if(!isset($_SESSION['login_user'])){
-  header("location: login.php?redirect=fileupload.php");
+  header("location: login.php?redirect=fileUpload.php");
       
 }
 
