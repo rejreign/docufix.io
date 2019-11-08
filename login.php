@@ -106,7 +106,7 @@
             <button id="submitData" name="submit" type="submit" class=""  >
                         Continue
                     </button>
-                    <a href="forgot.php" class="forgot__pass__link">Forgot password?</a>
+                    <a href="sendrecoveryemail.php" class="forgot__pass__link">Forgot password?</a>
                     <p class="Already-acc">Don't have an account?&nbsp;&nbsp; <a href="signup.php"><span>Sign up</span></a></p>
             <!-- <h3 class="col-lg-8 text-center">OR</h3> 
             <div class=" btn-grp col-lg-7  justify-content-between">
