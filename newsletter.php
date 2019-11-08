@@ -45,8 +45,8 @@ $the_mailer->SMTPOptions = array(
         'allow_self_signed' => true
     )
 );
-$the_mailer->setFrom ("docufixwebapp@gmail.com", "DOCUFIX News leetr ");
-$the_mailer->subject = "Thank You for subscribing to our news letter";
+$the_mailer->setFrom ("docufixwebapp@gmail.com", "DOCUFIX News Letter ");
+$the_mailer->Subject = "Thank You for subscribing to our news letter";
 $the_mailer->addAddress($email); 
 $the_mailer-> isHTML(true);
 $the_mailer->Body = "Thanks for subscribing to our news letter we will keep you posted. Cheers";
