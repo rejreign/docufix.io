@@ -377,6 +377,7 @@ $(document).ready(function(){
     }).done (function (data){
       setTimeout(function(){
         $('.txt').html(data);
+        $("#newsForm").trigger("reset");
       }, delay);
     });
   });
