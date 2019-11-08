@@ -40,6 +40,10 @@ document.getElementById('fileBtn').classList.remove('active1')
 
 }
 
+$('#instructionLink').click(function() {
+      $('#instructionModal').modal('show')  
+})
+
 
 $('#uploadUrlBtn').on('click', function(e) {
 
@@ -171,7 +175,10 @@ function getCookie(name) {
       // $('#textareaResult').attr("style", "display:block");
         let separators = [];
         let firstString = $('#textareaBefore').val()
-        let delimiter = $('#delimiter').val();
+    
+        let delimiter = $('#delimiterText').val();
+        // console.log(firstString.split(','));
+        
         duplicateChecker(firstString, delimiter)
 
     // let firstStringSet = new Set(firstString.split(new RegExp(separators.join('|'), 'g')))
@@ -331,26 +338,48 @@ function duplicateChecker(text, delimiter) {
   let standardCaseValue = firstString.split(delimiter)
   
 
-  const lowerCaseMap = lowerCaseValue.map(x => x.replace('\n', '').trim())
+  const lowerCaseMap = lowerCaseValue.map(x => x.trim())
+  console.log(lowerCaseMap);
+  
 
 
   let unique = {};
+  let uniqueValues = {};
+  let duplicateValues = {};
+
+
   lowerCaseMap.forEach(function(i,v) {
     if(!unique[i]) {
-      unique[standardCaseValue[v]] = true;
+      console.log(i);
+      unique[i] = true
+      
+      uniqueValues[standardCaseValue[v]] = true;
+    }else{
+      // console.log(i);
+      
+      duplicateValues[standardCaseValue[v]] = true;
+
     }
   });
   
  
 
-  console.log(Object.keys(unique));
+  console.log(Object.keys(duplicateValues));
   
+  $('#duplicateModal').modal("show");  
+  $('#duplicate-body').html(Object.keys(duplicateValues)+ '</br>');
 
-  
-  $('#textareaAfter').val(Object.keys(unique));
-  $('#textareaResult').val(Object.keys(unique));
-  $("#textareaDifferences").val(Object.keys(unique));
-  $("#textareaDifferences").html(Object.keys(unique));
+  $('#remove__duplicates').click(function(e) {      
+    $('#textareaAfter').val(Object.keys(uniqueValues));
+    $('#textareaResult').val(Object.keys(uniqueValues));
+    $("#textareaDifferences").val(Object.keys(uniqueValues));
+    $("#textareaDifferences").html(Object.keys(uniqueValues));
+    $('#duplicateModal').modal("hide");  
+
+    
+  })
+
+
 
 
 
