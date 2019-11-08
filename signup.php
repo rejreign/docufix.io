@@ -166,9 +166,6 @@ if(isset($_POST['submit'])){
                           <a class="text-center" href="faq.html">FAQs</a>
                         </li>
                         <li class="list-inline-item">
-                        <a class="text-center" href="why-use-docufix.html">Why use Docufix</a>
-                      </li>
-                        <li class="list-inline-item">
                             <a class="text-center" href="termsOfService.html">Terms and Conditions</a>
                           </li>
                       <li class="list-inline-item">

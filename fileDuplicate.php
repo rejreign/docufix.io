@@ -88,7 +88,7 @@
               </div>
             </div>
           </div>
-         <header>
+          <header>
           <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
             <a class="navbar-brand px-sm-5 ml-3" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" id="image"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -112,7 +112,8 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-center" href="teampage.html">Our Team</a>
-                </li> <?php
+                </li>
+                 <?php
                   if(!isset($_SESSION['login_user'])){
                   echo '
                   <li class="nav-item">
@@ -419,9 +420,6 @@
                       <li class="list-inline-item">
                           <a class="text-center" href="faq.html">FAQs</a>
                         </li>
-                        <li class="list-inline-item">
-                        <a class="text-center" href="why-use-docufix.html">Why use Docufix</a>
-                      </li>
                         <li class="list-inline-item">
                             <a class="text-center" href="termsOfService.html">Terms and Conditions</a>
                           </li>
