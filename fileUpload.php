@@ -441,7 +441,8 @@
                   <div class="mx-auto">
                     <div class="">
                       
-                        <button onclick="document.getElementById('id02').style.display='block'" class="btn mt-2 mb-0 mb-md-5 text-light" style="background-color:  #3B1F9E"><i class="fas fa-cloud-download-alt"></i>Download <strong>HERE</strong></button>
+                         <button type="button" class="btn mt-2 mb-0 mb-md-5" data-toggle="modal" data-target="#myModal" style="background-color:  #3B1F9E; color: white;"><i class="fas fa-cloud-download-alt"></i>Download <strong>HERE</strong></button>
+
                          <!--JOVIA SAV AS EMAIL BUTTON-->
                       <button id ="btn" onclick="CopyDivsToTextArea();" data-toggle="modal"  data-target="#myModal2" class="btn mt-2 mb-0 mb-md-5 text-light" style="background-color:  #3B1F9E"><i class="fas fa-cloud-download-alt"></i>Save As <strong>Email</strong></button>
                     </div>
@@ -450,7 +451,46 @@
                   </div>
                     
                 </div>
+
+              
+
+                <!-- FROM @Major  -->
+                <div id="myModal" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+                
+                    
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                       
+                      </div>
+                      <div class="modal-body">
+
+                          <br />
+                          <br />
+            
+                          <input type="text" placeholder="Please Specify Document Name..." id="saveAs" required></input><br/>
+                          <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i
+                              class="fas fa-cloud-download-alt"></i> Download as word
+                            doc</button>
+                          <button id="cmd" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i
+                              class="fas fa-cloud-download-alt"></i>Download as PDF</button>
+                              <button id="btn-export" onclick="txt();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i
+                                class="fas fa-cloud-download-alt"></i> Download as .txt
+                        </button>
+                        
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                
+                  </div>
+                </div>
+
                
+          
+
           
 
                   <!--JOVIAL SAVE AS EMAIL MODAL-->
@@ -497,7 +537,7 @@
           
           
           
-                <div class="w3-container">
+               <!--- <div class="w3-container">
                   <div id="id02" class="w3-modal">
                     <div class="w3-modal-content" style="border-radius: 4px;">
                       <div class="w3-container">
@@ -518,7 +558,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>--->
           
           
           
