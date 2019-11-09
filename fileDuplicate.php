@@ -3,10 +3,8 @@
    include 'controller.php';
 
  
-  if(!isset($_SESSION['login_user'])){
-  header("location: login.php?redirect=fileDuplicate.php");
+ 
       
-}
 
 
 ?>
@@ -302,14 +300,35 @@
                             <input id="delimiter" for="delimiter" type="text" required name="delimiter" class="form-control delimterInput" placeholder="E.g:  , ; . ">
                         </div>
                     </div>
+                     <?php
+                               
+                               
 
-                 
-                    <div class="form-group">
+                             
+                              if(isset($_SESSION['login_user'])){
+                                echo '<div class="form-group">
                       <button id="uploadBtn" type="submit" value="submit"
                         class="btn uploadBtnClass">Remove Duplicate</button>
           
                          
-                    </div>
+                    </div>';
+                              
+                                  
+                            }
+                            else {
+                              echo '<div class="form-group">
+                      <a href="login.php?redirect=fileDuplicate.php"><button id="uploadBtn" type="submit" value="submit"
+                        class="btn uploadBtnClass">Remove Duplicate</button></a>
+          
+                         
+                    </div>';
+
+                            }
+
+
+                        ?>
+                 
+                   
                   </form>
           
           
@@ -370,7 +389,22 @@
                         <input id="delimiterText" type="text" class="form-control delimterInput" placeholder="Enter Delimeter" required>
                         
                           <div class="button-container text-center">
-                              <button  class="btn font-weight-bold text-light rounded-pill px-5" style="background-color:  #3B1F9E;" type="submit" id="removeDuplicateText"> Remove Duplicate</button>
+
+
+                            
+                               <?php
+                  if(isset($_SESSION['login_user'])){
+                  echo '
+                   <button  class="btn font-weight-bold text-light rounded-pill px-5" style="background-color:  #3B1F9E;" type="submit" id="removeDuplicateText"> Remove Duplicate</button>
+                  ';
+                  }
+                else
+                {
+                    echo '
+                     <a href="login.php?redirect=fileDuplicate.php"><button  class="btn font-weight-bold text-light rounded-pill px-5" style="background-color:  #3B1F9E;" type="submit" id="removeDuplicateText"> Remove Duplicate</button> <a href="login.php?redirect=fileDuplicate.php">
+                  ';
+                }
+                ?>
                               <button class="btn rounded-pill resetBtn" id="resetbutton">Reset</button>
                           </div>
                             
