@@ -108,7 +108,7 @@ if(isset($_POST['submit'])){
                 <a class="navbar-brand  " href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
             </div>
             
-            <a href="login.php">Sign in</a>
+            <a href="login.php" class="link">Sign in</a>
         </div>
     </header>
 
