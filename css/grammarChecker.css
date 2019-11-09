@@ -1,4 +1,6 @@
-
+*{
+	box-sizing: border-box;
+}
 
 h3 {
 	font-size: 1.6em;
@@ -12,15 +14,17 @@ h3 {
 
 .bu{
 	color: #3B1F9E;
-	font-family: Nunito;	
-width: 245px;
-height: 46px;
-font-weight: 800;
-font-size: 18px;
-text-align: center;
+	font-family: Nunito;
+	width: 245px;
+	height: 46px;
+	font-weight: 800;
+	font-size: 18px;
+	text-align: center;
+	border: none;
+	outline: none;
 
-background: rgba(59, 31, 158, 0.05);
-border-radius: 40px;
+	background: rgba(59, 31, 158, 0.05);
+	border-radius: 40px;
 }
 
 
