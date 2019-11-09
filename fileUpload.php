@@ -3,10 +3,7 @@
    include 'controller.php';
 
  
-  if(!isset($_SESSION['login_user'])){
-  header("location: login.php?redirect=fileUpload.php");
-      
-}
+
 
 
 ?>
@@ -291,10 +288,32 @@
                     <div class="form-group">
                       <button style="background-color:  #3B1F9E;color: white;" id="uploadViaUrlBtn" type="submit" value="submit"
                         class="btn rounded-pill px-5">Compare</button>
-          
-                        
-                          
                     </div>
+                    <?php
+                               
+                               
+
+                             
+                              if(isset($_SESSION['login_user'])){
+                                echo ' <div class="form-group">
+                      <button style="background-color:  #3B1F9E;color: white;" id="uploadViaUrlBtn" type="submit" value="submit"
+                        class="btn rounded-pill px-5">Compare</button>
+                    </div>';
+                              
+                                  
+                            }
+                            else {
+                                       echo ' <div class="form-group">
+                              <a href="login.php?redirect=fileUpload.php"><button style="background-color:  #3B1F9E;color: white;" id="uploadViaUrlBtn" type="submit" value="submit"
+                                class="btn rounded-pill px-5">Compare</button></a>
+                            </div>';
+
+                             
+
+                            }
+
+
+                        ?>
                   </form>
                 </div>
               </div>
@@ -337,10 +356,30 @@
                                 ></textarea>
                             </div>
                         </div>
-                        <div class="text-center col-md-12 m-3">
+                         <?php
+                               
+                               
+
+                             
+                              if(isset($_SESSION['login_user'])){
+                                echo '<div class="text-center col-md-12 m-3">
                                 <button value="compare" class="btn font-weight-bold  rounded-pill px-5"
                                   style="background-color:   #EEEEEE;color:#333333;" type="submit" onclick="buttonCompareClicked();"> Compare</button>
-                              </div>
+                              </div>';
+                              
+                                  
+                            }
+                            else {
+                              echo '<div class="text-center col-md-12 m-3">
+                                <a href="login.php?redirect=fileUpload.php"><button value="compare" class="btn font-weight-bold  rounded-pill px-5"
+                                  style="background-color:   #EEEEEE;color:#333333;" type="submit"> Compare</button></a>
+                              </div>';
+
+                            }
+
+
+                        ?>
+                        
                     </div>
                 </div>
                 <div>
