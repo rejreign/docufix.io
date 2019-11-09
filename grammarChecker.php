@@ -280,13 +280,13 @@ font-weight: bold;
             <div class ="h">
                <table>
 
-                 <td> <tr><input type="button"  class="b-btn comp-btn bu" id ="b3" data-toggle="modal" data-target="#myModal"  value = "Dictionary">
+                 <td> <tr><input type="button" style="margin-right: 20px;"  class="b-btn comp-btn bu" id ="b3" data-toggle="modal" data-target="#myModal"  value = "Dictionary">
                  <!--<td> <input type="button" style="padding-left: 10px; padding-right: 10px; width: 100px; background-color: rgb(12, 10, 90); border-radius: 4px; height: 30px;" class="b-btn comp-btn" data-toggle="modal" data-target="#myModal2"  value ="Help">-->
 
-                 </tr>
-                 <tr style = "color: white">  ... </tr>
-                 <tr>
-                 <select name="lang" id="lang" class="b-btn comp-btn bu">
+                 <!-- </tr>
+                 <tr style = "color: white"></tr>
+                 <tr> -->
+                 <select name="lang" id="lang" class="b-btn comp-btn bu" style="padding-left: 10px;"
                      <option value="en-US">English</option>
                      <option value="de-DE">German</option>
                      <option value="it">Italian</option>
