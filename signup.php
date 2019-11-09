@@ -42,8 +42,11 @@ if(isset($_POST['submit'])){
                 $sql = "SELECT email FROM users WHERE email = '$userEmail' ";
                 $result = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($result) > 0) {
-                  die('email address exists');
+                    $message = '<p class="text-warning">Email address exists</p>';
+                                         echo $message;
+                 // echo 'Email address exists';
                    }
+
                 else { 
 
                     $sql = "INSERT INTO users(firstname, lastname, email, password)
