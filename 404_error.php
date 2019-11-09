@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav text-center ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="about_us.php">About Us</a>
+                  <a class="nav-link" href="about_us.php">About</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

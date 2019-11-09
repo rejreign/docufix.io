@@ -3,10 +3,8 @@
    include 'controller.php';
 
  
-  if(!isset($_SESSION['login_user'])){
-  header("location: login.php?redirect=fileDuplicate.php");
+ 
       
-}
 
 
 ?>
@@ -42,7 +40,49 @@
     <body style="background-color:  white; font-family: Ubuntu;"
     onload="view()">
         <!--Header-->
-        <div class="w3-container" >
+                <!-- Modal -->
+                <div class="modal fade" id="instructionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">BEFORE GETTING STARTED</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li class="modal-list">Docufix Duplicate Checker supports file formats like .txt, .docx, .csv, .json, .xml .txt .pdf, .rtf, .odt, .html, .xpt, .ods, .xls, .epub .css and .dta for
+                      <strong>uploading</strong></li>
+                      <li class="modal-list">To check duplicates you will need to provide a delimiter in which the text is seperated i.e <strong>
+                        random@gmail.com,
+                        random,
+                        docufix@gmail.xom,
+                        random@gmail.com,
+                        random
+                      </strong> </li>
+                      <li>The above example is seperated by a ',' (comma). So in the delimeter box you are to provide the comma as the delimeter</li>
+                    <li class="modal-list">To check duplicates in your documents aside from the ones mentioned above, Kindly make use of the text
+                      option, then <strong> copy</strong> and <strong> paste</strong> into the text-box.</strong></li>
+
+                    <li class="modal-list">After clicking remove duplicates to remove the duplicate, A modal will pop up showing you the duplicates you have in the file</li>
+                    <li>Then you can go ahead to remove the duplicate by clicking remove duplicate in the modal</li>
+                    <li>Your result can be downloaded as .docs and pdf files</li>
+                    <li>Results are  <strong>editable,</strong> this means you can edit your work for correction after
+                      removing duplicates.</li>
+                  </ul>
+        
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        <!-- <div class="w3-container" >
             <div id="id01" class="w3-modal" >
               <div class="w3-modal-content mb-0">
                 <span onclick="document.getElementById('id01').style.display='none'"
@@ -87,7 +127,7 @@
         
               </div>
             </div>
-          </div>
+          </div> -->
           <header>
           <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
             <a class="navbar-brand px-sm-5 ml-3" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" id="image"></a>
@@ -133,7 +173,7 @@
                     <a class="nav-link text-center" href="profile.php">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-center" href="logout.php">logout</a>
+                  <a class="nav-link text-center" href="logout.php">Logout</a>
                 </li>
                   ';
                 }
@@ -172,7 +212,7 @@
                               <h5 class="pb-4 font-weight-bold" style="color: rgba(12, 10, 90, 0.8)">Other Tools:</h5>
                               <a href="grammarChecker.php" class="btn btn-sm rounded-pill font-weight-bold" style="color: rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Grammar check</a>
                                           <a href="fileUpload.php" class="btn btn-sm rounded-pill font-weight-bold" style="color:rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Compare files</a>
-                                          <div class="btn float-right" style="cursor: pointer;color: rgba(12, 10, 90, 0.8)"  onclick="instruction()"> Instructions</div>
+                                          <div class="btn float-right" style="cursor: pointer;color: rgba(12, 10, 90, 0.8)"  id="instructionLink"> Instructions</div>
                           </div>
                        
                       </div>
@@ -190,6 +230,30 @@
                       src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193193/samples/figma%20career-list/lario/slpij76xxh4f7bpixbr5.png">Text
                   </a></span>
               </h2> -->
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="duplicateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Duplicates to be removed </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body" id="duplicate-body">
+                      
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" id="remove__duplicates">Remove Duplicates</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
               <div class="row mt-5">
                 <div class="col-md-12 text-center">
                   <div class="btn p-0 rounded-pill py-2" style=" background-color: rgba(59, 31, 158, 0.05)">
@@ -236,14 +300,35 @@
                             <input id="delimiter" for="delimiter" type="text" required name="delimiter" class="form-control delimterInput" placeholder="E.g:  , ; . ">
                         </div>
                     </div>
+                     <?php
+                               
+                               
 
-                 
-                    <div class="form-group">
+                             
+                              if(isset($_SESSION['login_user'])){
+                                echo '<div class="form-group">
                       <button id="uploadBtn" type="submit" value="submit"
                         class="btn uploadBtnClass">Remove Duplicate</button>
           
                          
-                    </div>
+                    </div>';
+                              
+                                  
+                            }
+                            else {
+                              echo '<div class="form-group">
+                      <a href="login.php?redirect=fileDuplicate.php"><button id="uploadBtn" type="submit" value="submit"
+                        class="btn uploadBtnClass">Remove Duplicate</button></a>
+          
+                         
+                    </div>';
+
+                            }
+
+
+                        ?>
+                 
+                   
                   </form>
           
           
@@ -304,7 +389,22 @@
                         <input id="delimiterText" type="text" class="form-control delimterInput" placeholder="Enter Delimeter" required>
                         
                           <div class="button-container text-center">
-                              <button  class="btn font-weight-bold text-light rounded-pill px-5" style="background-color:  #3B1F9E;" type="submit" id="removeDuplicateText"> Remove Duplicate</button>
+
+
+                            
+                               <?php
+                  if(isset($_SESSION['login_user'])){
+                  echo '
+                   <button  class="btn font-weight-bold text-light rounded-pill px-5" style="background-color:  #3B1F9E;" type="submit" id="removeDuplicateText"> Remove Duplicate</button>
+                  ';
+                  }
+                else
+                {
+                    echo '
+                     <a href="login.php?redirect=fileDuplicate.php"><button  class="btn font-weight-bold text-light rounded-pill px-5" style="background-color:  #3B1F9E;" type="submit" id="removeDuplicateText"> Remove Duplicate</button> <a href="login.php?redirect=fileDuplicate.php">
+                  ';
+                }
+                ?>
                               <button class="btn rounded-pill resetBtn" id="resetbutton">Reset</button>
                           </div>
                             
@@ -360,10 +460,10 @@
                     
                 <!---MODAL FOR SAVE AS-->
           
+                                              
           
           
-          
-                <div class="w3-container">
+                <!-- <div class="w3-container">
                   <div id="id02" class="w3-modal">
                     <div class="w3-modal-content" style="border-radius: 4px;">
                       <div class="w3-container">
@@ -380,6 +480,7 @@
                             class="fas fa-cloud-download-alt"></i>Download as PDF</button>
                             <button id="btn-export" onclick="txt();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i
                               class="fas fa-cloud-download-alt"></i> Download as .txt
+                                              
                       </button>
                       </div>
                     </div>
@@ -389,7 +490,7 @@
           
           
               </div>
-          
+           -->
               <!--END OF MODAL-->
               <div align="right" class="shareBtn" id="shareBtn">
                 <h4>Helpful? Please Share With Your Friends On:</h4>

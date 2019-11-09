@@ -42,8 +42,11 @@ if(isset($_POST['submit'])){
                 $sql = "SELECT email FROM users WHERE email = '$userEmail' ";
                 $result = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($result) > 0) {
-                  die('email address exists');
+                    $message = '<p class="text-warning">Email address exists</p>';
+                                         echo $message;
+                 // echo 'Email address exists';
                    }
+
                 else { 
 
                     $sql = "INSERT INTO users(firstname, lastname, email, password)
@@ -55,13 +58,22 @@ if(isset($_POST['submit'])){
                            $result = mysqli_query($conn , $sql);
                     if($result){
                                     $message .= '<div class="alert alert-success" role="alert">
-                                    Record Saved Successfully <button class="btn"><a href = "index.php">Home</a></button></div>';
+                                    Sign up successful <button class="btn"><a href = "index.php">Home</a></button></div>';
                                             echo ($message);
+
+                                            $_SESSION['login_user'] = $userEmail;
+                                            $_SESSION['loggedin'] = true;
+                                            $_SESSION['firstname'] = $result['firstname'];
+                                            $_SESSION['lastname'] = $result['lastname'];
+                                            $_SESSION['login_id'] = $result['id'];
+                                            $_SESSION['registered_date'] = $result['created_at'];
+
+                                            header("location: login.php");
 
                     }
                     else{
                         $message .= '<div class="alert alert-danger" role="alert">
-                        Record not Saved ' . mysqli_error($conn) . '<button class="btn"><a href = "index.php">Home</a></button>
+                        Sign up unsuccesful. ' . mysqli_error($conn) . '<button class="btn"><a href = "index.php">Home</a></button>
                         </div>';
                     
                     }

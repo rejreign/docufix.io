@@ -3,10 +3,7 @@
    include 'controller.php';
 
  
-  if(!isset($_SESSION['login_user'])){
-  header("location: login.php?redirect=fileUpload.php");
-      
-}
+
 
 
 ?>
@@ -45,7 +42,7 @@
                 <span onclick="document.getElementById('id01').style.display='none'"
                   class="w3-button w3-display-topright mb-0">&times;</span>
                   
-                  <div class="form-group pl-3 mb-0" id="checkbox">
+                  <div class="form-group pl-3 mb-0 pt-3" id="checkbox">
                     <label for="modalSetting" class="font-weight-bold"><input type="checkbox" name="modal" id="modalSetting" onchange="visibility()"> Check this box to stop getting this alert</label>
                     
                   </div>
@@ -54,7 +51,7 @@
                 </div>
         
                 <div id="modal-content">
-                  <ul>
+                  <ul id="mList">
                     <li class="modal-list">Docufix only supports file formats like .docx, .csv, .json, .xml .txt .pdf, .rtf, .odt, .html, .xpt, .ods, .xls, .epud, .css and .dta for
                       <strong>uploading</strong></li>
                     <li class="modal-list">To compare documents aside from the ones mentioned above, make use of the text
@@ -64,18 +61,6 @@
                       input that are not found in the first text input</li>
                     <li><span style="background-color: yellow" class="space"> YELLOW HIGHLIGHT</span> Means the texts in first
                       text input that are not found in the second text input</li>
-                    <li><strong> PLAIN TEXT</strong> Means text found in both tex inputs</li>
-                    <li>Compared documents can be downloaded as .docs and pdf files</li>
-                    <li>Compared texts are <strong>editable,</strong> this means you can edit your work for correction after
-                      comparing.</li>
-                  </ul>
-        
-                  <h1 id="important">IMPORTANT!!!</h1>
-                  <ul>The following activities would not be efficiently carried out on mobile phone except for larger screen
-                    sizes:
-        
-                    <li>Comparing of documents</li>
-                    <li>Formatting of compared document</li>
                   </ul>
                 </div>
         
@@ -85,61 +70,61 @@
               </div>
             </div>
           </div>
-           <header>
-          <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
-            <a class="navbar-brand px-sm-5 ml-3" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" id="image"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto px-5">
-                <li class="nav-item">
-                  <a class="nav-link text-center" href="about_us.php">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Tools
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-justify" href="fileUpload.php">Compare files</a>
-                    <a class="dropdown-item text-justify" href="grammarChecker.php">Grammar Check</a>
-                    <a class="dropdown-item text-justify" href="fileDuplicate.php">Duplicates Check</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-center" href="teampage.php">Our Team</a>
-                </li>
-                 <?php
-                  if(!isset($_SESSION['login_user'])){
-                  echo '
-                  <li class="nav-item">
-                    <a class="nav-link text-center" href="login.php">Login</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-center" href="signup.php">Get Started</a>
-                </li>
-                  ';
+          <header>
+<nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
+  <a class="navbar-brand px-sm-5 ml-3" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" id="image"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto px-5">
+      <li class="nav-item">
+        <a class="nav-link text-center" href="about_us.php">About</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Tools
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item text-justify" href="fileUpload.php">Compare files</a>
+          <a class="dropdown-item text-justify" href="grammarChecker.php">Grammar Check</a>
+          <a class="dropdown-item text-justify" href="fileDuplicate.php">Duplicates Check</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center" href="teampage.php">Our Team</a>
+      </li>
+       <?php
+        if(!isset($_SESSION['login_user'])){
+        echo '
+        <li class="nav-item">
+          <a class="nav-link text-center" href="login.php">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center" href="signup.php">Get Started</a>
+      </li>
+        ';
 
 
-                }
-                else
-                {
-                    echo '
-                  <li class="nav-item">
-                    <a class="nav-link text-center" href="profile.php">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-center" href="logout.php">logout</a>
-                </li>
-                  ';
-                }
-                ?>
-                
-              </ul>
-            </div>
-          </nav>
-    </header>
+      }
+      else
+      {
+          echo '
+        <li class="nav-item">
+          <a class="nav-link text-center" href="profile.php">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center" href="logout.php">Logout</a>
+      </li>
+        ';
+      }
+      ?>
+      
+    </ul>
+  </div>
+</nav>
+</header>
         <!--Body-->
         <div id="main" style="background-color: #ffffff;">
           
@@ -242,7 +227,7 @@
                     </div>
                     <div class="form-group mt-4" style="margin-bottom: 1em;">
                       <button style="background-color:  #3B1F9E;color: white;" id="uploadBtn" type="submit" value="submit"
-                        class="btn text-light rounded-pill px-5">Compare</button>
+                        class="btn text-light rounded-pill px-5">Upload</button>
           
                          
                     </div>
@@ -303,10 +288,32 @@
                     <div class="form-group">
                       <button style="background-color:  #3B1F9E;color: white;" id="uploadViaUrlBtn" type="submit" value="submit"
                         class="btn rounded-pill px-5">Compare</button>
-          
-                        
-                          
                     </div>
+                    <?php
+                               
+                               
+
+                             
+                              if(isset($_SESSION['login_user'])){
+                                echo ' <div class="form-group">
+                      <button style="background-color:  #3B1F9E;color: white;" id="uploadViaUrlBtn" type="submit" value="submit"
+                        class="btn rounded-pill px-5">Compare</button>
+                    </div>';
+                              
+                                  
+                            }
+                            else {
+                                       echo ' <div class="form-group">
+                              <a href="login.php?redirect=fileUpload.php"><button style="background-color:  #3B1F9E;color: white;" id="uploadViaUrlBtn" type="submit" value="submit"
+                                class="btn rounded-pill px-5">Compare</button></a>
+                            </div>';
+
+                             
+
+                            }
+
+
+                        ?>
                   </form>
                 </div>
               </div>
@@ -322,7 +329,7 @@
                 <div class="row card mt-4 m-1 mb-4" style="background-color: white">
                     <div class="row">
                         <div class="col-md-6 text-center  pr-md-0">
-                            <div class="card-header" style="border-bottom: 1px solid #C4C4C4;background-color: white">Original Text</div>
+                            <div class="card-header" style="border-bottom: 1px solid #C4C4C4;background-color: white"><span class="btn-link float-left" style="cursor: pointer;color: #0C105F" id="reset">reset</span> Original Text  </div>
                             <div class="card-body p-0" >
                                 <textarea
                                     placeholder="1."
@@ -336,7 +343,7 @@
                         </div>
                         <div class="col-md-6 text-center pl-md-0 mt-4 mt-md-0">
                             <div class="card-header" style="border-bottom: 1px solid #C4C4C4;background-color: white">
-                                Duplicate Text
+                                Duplicate Text <span id="reset1" class="btn-link float-right" style="cursor: pointer;color: #0C105F">reset</span>
                             </div>
                             <div class="card-body p-0">
                                 <textarea
@@ -349,10 +356,30 @@
                                 ></textarea>
                             </div>
                         </div>
-                        <div class="text-center col-md-12 m-3">
-                                <button name="submit" value="compare" class="btn font-weight-bold  rounded-pill px-5"
+                         <?php
+                               
+                               
+
+                             
+                              if(isset($_SESSION['login_user'])){
+                                echo '<div class="text-center col-md-12 m-3">
+                                <button value="compare" class="btn font-weight-bold  rounded-pill px-5"
                                   style="background-color:   #EEEEEE;color:#333333;" type="submit" onclick="buttonCompareClicked();"> Compare</button>
-                              </div>
+                              </div>';
+                              
+                                  
+                            }
+                            else {
+                              echo '<div class="text-center col-md-12 m-3">
+                                <a href="login.php?redirect=fileUpload.php"><button value="compare" class="btn font-weight-bold  rounded-pill px-5"
+                                  style="background-color:   #EEEEEE;color:#333333;" type="submit"> Compare</button></a>
+                              </div>';
+
+                            }
+
+
+                        ?>
+                        
                     </div>
                 </div>
                 <div>
@@ -408,20 +435,19 @@
                                     </tr>
                                   </tbody>
                                 </table> -->
-                  <label>Result:</label>
                   <br />
           
                   <br>
           
           
-                  <div class="toolbar" style = "padding: 30px; background-color: #C96;">
+                  <div class="toolbar" style = "padding: 30px; background-color: rgba(59, 31, 158, 0.05);">
                     <a href="#" data-command='undo'><i class='fa fa-undo'></i></a>
                     <a href="#" data-command='redo'><i class='fa fa-repeat'></i></a>
-                    <div class="fore-wrapper"><i class='fa fa-font' style='color:#C96;'></i>
+                    <div class="fore-wrapper"><i class='fa fa-font' style='color: #0C105F;'></i>
                       <div class="fore-palette">
                       </div>
                     </div>
-                    <div class="back-wrapper"><i class='fa fa-font' style='background:#C96;'></i>
+                    <div class="back-wrapper"><i class='fa fa-font' style='background:rgba(59, 31, 158, 0.05);'></i>
                       <div class="back-palette">
                       </div>
                     </div>
@@ -450,12 +476,58 @@
                   <div contenteditable="true" id="textareaDifferences" class ="test1"
                     style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
                 </div>
-                <button onclick="document.getElementById('id02').style.display='block'" class="btn-dark mt-2 mb-5"
-                  style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Download <strong>HERE</strong></button>
-          
-                  <!--JOVIA SAV AS EMAIL BUTTON-->
-                  <button id ="btn" onclick="CopyDivsToTextArea();" data-toggle="modal"  data-target="#myModal2" class="btn-dark mt-2 mb-5"
-                  style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Save As <strong>Email</strong></button>
+                <div class="row">
+                  <div class="mx-auto">
+                    <div class="">
+                      
+                         <button type="button" class="btn mt-2 mb-0 mb-md-5" data-toggle="modal" data-target="#myModal" style="background-color:  #3B1F9E; color: white;"><i class="fas fa-cloud-download-alt"></i>Download <strong>HERE</strong></button>
+
+                         <!--JOVIA SAV AS EMAIL BUTTON-->
+                      <button id ="btn" onclick="CopyDivsToTextArea();" data-toggle="modal"  data-target="#myModal2" class="btn mt-2 mb-0 mb-md-5 text-light" style="background-color:  #3B1F9E"> <strong>Email</strong></button>
+                    </div>
+              
+                     
+                  </div>
+                    
+                </div>
+
+              
+
+                <!-- FROM @Major  -->
+                <div id="myModal" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+                
+                    
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                       
+                      </div>
+                      <div class="modal-body">
+
+                          <br />
+                          <br />
+            
+                          <input type="text" placeholder="Please Specify Document Name..." id="saveAs" required></input><br/>
+                          <button id="btn-export" onclick="exportHTML();" class="mt-2 mb-5" style="padding: 7px 14px; background-color:  #3B1F9E; color: white;"><i
+                              class="fas fa-cloud-download-alt"></i> Download as word
+                            doc</button>
+                          <button id="cmd" class="mt-2 mb-5"style =" padding: 7px 14px; background-color:  #3B1F9E; color: white;"><i
+                              class="fas fa-cloud-download-alt" ></i>Download as PDF</button>
+                              <button id="btn-export" onclick="txt();" class="mt-2 mb-5" style="padding: 7px 14px; background-color:  #3B1F9E; color: white;""><i
+                                class="fas fa-cloud-download-alt"></i> Download as .txt
+                        </button>
+                        
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                
+                  </div>
+                </div>
+
+               
           
 
                   <!--JOVIAL SAVE AS EMAIL MODAL-->
@@ -486,23 +558,22 @@
               <!--  -->
                
                     <div class="modal-footer">
-                            <button type="submit" name="submit" id="closeSend" class="btn btn-default">Send!</button>
+                            <button type="submit" name="submit" id="closeSend" class="btn btn-default" style="padding: 7px 14px; background-color:  #3B1F9E; color: white;">Send!</button>
                       </form>
             
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-default" data-dismiss="modal" style="padding: 7px 14px; background-color:  #3B1F9E; color: white;">Close</button>
                     </div>
                   </div>
                   
                 </div>
               </div>
-            
 
                 <!---MODAL FOR SAVE AS-->
           
           
           
           
-                <div class="w3-container">
+               <!--- <div class="w3-container">
                   <div id="id02" class="w3-modal">
                     <div class="w3-modal-content" style="border-radius: 4px;">
                       <div class="w3-container">
@@ -523,7 +594,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>--->
           
           
           
@@ -563,7 +634,6 @@
                         <li class="list-inline-item">
                             <a class="text-center" href="termsOfService.php">Terms of Service</a>
                           </li>
-                      
                     </ul>
               </div>
             </div>
@@ -1178,7 +1248,7 @@ $(window).on("scroll", function() {
           
               twitterShare.onclick = function (e) {
                 e.preventDefault();
-                var twitterWindow = window.open('https://twitter.com/intent/tweet?text=Hey! I just compared my files for similarities on&url=http://docufix.ga/fileUpload.php&###', 'twitter-popup', 'height=350,width=600');
+                var twitterWindow = window.open('https://twitter.com/intent/tweet?text=Hey! I just compared my files for similarities on&url=http://docufix.ga/fileUpload.html&###', 'twitter-popup', 'height=350,width=600');
                 if (twitterWindow.focus) { twitterWindow.focus(); }
                 return false;
               }
@@ -1382,6 +1452,19 @@ function CopyDivsToTextArea()
 }
 
 </script>
+<script>
+    const reset = document.getElementById("reset");
+    reset.addEventListener("click", (e)=>{
+    e.target.parentElement.nextElementSibling.children[0].value = "";
+      
+    });
+    const reset1 = document.getElementById("reset1");
+    reset1.addEventListener("click", (e)=>{
+    e.target.parentElement.nextElementSibling.children[0].value = "";
+      
+    })
+</script>
 
     </body>
 </html>
+
