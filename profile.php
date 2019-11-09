@@ -43,9 +43,6 @@
           <li class="nav-item active">
             <a class="nav-link" href="index.php">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="profile.php">Dashboard</a>
-          </li>
           <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Tools
@@ -112,7 +109,7 @@
              </h4>
             <p class="userprofile-plan medium-purple-text">Free User</p>
             <p class="userprofile-date small-spaced-text">Date Registered <span> <?= $_SESSION['registered_date'] ?> </span></p>
-            <button class="userprofile-changeplan btn prof-btn p-bloc-btn mr-2"><i class="fa fa-pencil" aria-hidden="true"></i> Change Plan</button>
+            <!--button class="userprofile-changeplan btn prof-btn p-bloc-btn mr-2"><i class="fa fa-pencil" aria-hidden="true"></i> Change Plan</button-->
             <a href="changepassword.php"><button class="userprofile-changeplan btn prof-btn p-bloc-btn"><i class="fa fa-lock" aria-hidden="true"></i>Change Password</button></a>
 
             <h6 class="shaded-black prof-about-title"><i class="fa fa-user" aria-hidden="true"></i> About</h6>
@@ -128,13 +125,13 @@
             <!-- <p class="d-flex justify-content-between medium-text">Phone Number <span class="medium-purple-text">08034143461</span></p> -->
                   
             
-           </div>
+           <!--/div>
 
            <h6 class="shaded-black prof-about-title"><i class="fa fa-credit-card" aria-hidden="true"></i> Billing History</h6>
 
            <div class="transaction-history-bloc">
                <p class="small-spaced-text p-0">No Trasaction Yet</p>
-           </div>
+           </div-->
 
         </section>
     </div> 

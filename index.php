@@ -38,7 +38,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto px-5">
                 <li class="nav-item">
-                  <a class="nav-link text-center" href="about_us.html">About</a>
+                  <a class="nav-link text-center" href="about_us.php">About</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -51,7 +51,7 @@
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-center" href="teampage.html">Our Team</a>
+                  <a class="nav-link text-center" href="teampage.php">Our Team</a>
                 </li>
                 <?php
                   if(!isset($_SESSION['login_user'])){
@@ -73,7 +73,7 @@
                     <a class="nav-link text-center" href="profile.php">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-center" href="logout.php">logout</a>
+                  <a class="nav-link text-center" href="logout.php">Logout</a>
                 </li>
                   ';
                 }
@@ -96,8 +96,8 @@
                 <li><a href="https://docufix.io/fileUpload.php">Compare files</a></li>
                 <li><a href="https://docufix.io/grammarChecker.php">Grammar Check</a></li>
                 <li><a href="https://docufix.io/fileDuplicate.php">Duplicates Check</a></li>
-                <li><a href="plagiarismChecker.html">Plagiarism Check</a></li>
-                <li><a href="https://docufix.io/paraphrase.html">Paraphrasing tool</a></li>
+                <li><a href="plagiarismChecker.php">Plagiarism Check</a></li>
+                <li><a href="https://docufix.io/paraphrase.php">Paraphrasing tool</a></li>
               </ul>
             </li>
             <li><a href="#">Login</a></li>
@@ -111,7 +111,7 @@
             <div class="banner">
                 <div class="banner-text" data-aos="fade-right" data-aos-duration="1500">
                     <h3>Your Online Document Comparison Solution</h3>
-                    <p>Compare documents content and find out the differences in each content of the files without much stress</p>
+                    <p>Compare documents content, check for duplicates and grammatical error effortlessly. Docufix is built solidly with the latest technological tools for file and data management</p>
                 </div>
                 <div data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">
                     <button class="b-btn comp-btn"><a href="./fileUpload.php">Compare files</a></button>
@@ -135,21 +135,21 @@
                   <div class="feature-content-asset">
                     <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1573037501/Plagiarism_s3zf2l.png" alt="Plaigiarism" />
                   </div>
-                  <h2>Grammer Checker</h2>
+                  <h2>Grammar Check</h2>
                   <p>Docufix grammar checker corrects over 100 types of grammar and spelling mistakes, including verbs, nouns, pronouns, prepositions, and more.  In offering you advanced correction software, Docufix allows you to improve the quality of your writing and master English pronunciation.</p>
               </div>
               <div class="feature-content-text feat-2" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" data-aos-easing="ease-in-out">
                   <div class="feature-content-asset">
                     <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1573037501/Word_duplicate_sbqism.png" alt="Word duplicate" />
                   </div>
-                  <h2>Word Duplicate</h2>
-                  <p>One of the main problem in document is that most of the words that are duplicated also appear in the previous line, which makes it difficult to achieve your goal. If you'd want to remove all duplicated words, then it would not be that difficult by using our tool, all duplicated file will be reviewed.</p>
+                  <h2>Remove Duplicates</h2>
+                  <p>One of the main problem in document is that most of the words that are duplicated also appear in the previous line, which makes it difficult to achieve your goal. If you want to remove all duplicated text effortlessy, your best option is Docufix.</p>
               </div>
               <div class="feature-content-text feat-3" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600" data-aos-easing="ease-in-out">
                   <div class="feature-content-asset">
                     <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1573037501/File_checker_xz39qn.png" alt="File checker" />
                   </div>
-                  <h2>File Checker</h2>
+                  <h2>Compare files</h2>
                   <p>We help you compare files and texts, and generate differences in a visual text format which is easy to manage and understand. Comparing hundreds of files can be a tedious task, there are high chances that you would miss out on something. Here we make that easy for you.</p>
               </div>
             </div>
@@ -316,20 +316,17 @@
               <div class="col-sm-6 text-center">           
                   <ul class="list-inline text-center mt-3 pl-3">  
                       <li class="list-inline-item">
-                        <a class="text-center" href="contact.html">Contact us</a>
+                        <a class="text-center" href="contact.php">Contact us</a>
                       </li>
                       <li class="list-inline-item">
-                          <a class="text-center" href="faq.html">FAQs</a>
+                          <a class="text-center" href="faq.php">FAQs</a>
                         </li>
                         <li class="list-inline-item">
-                        <a class="text-center" href="why-use-docufix.html">Why use Docufix</a>
-                      </li>
+                          <a class="text-center" href="privacy.php">Privacy Policy</a>
+                        </li>
                         <li class="list-inline-item">
-                            <a class="text-center" href="termsOfService.html">Terms and Conditions</a>
+                            <a class="text-center" href="termsOfService.php">Terms of Service</a>
                           </li>
-                      <li class="list-inline-item">
-                          <a class="text-center" href="privacy.html">Privacy Policy</a>
-                      </li>
                       
                     </ul>
               </div>

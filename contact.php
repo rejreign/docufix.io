@@ -1,3 +1,6 @@
+<?php
+  include 'controller.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,7 +22,7 @@
         <!--Header-->
         <header>
           <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top">
-            <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572949531/docufix/Group_1_3_pqdphq.svg" alt="DOCUFIX" id="image"></a>
+            <a class="navbar-brand px-sm-5 ml-3" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572949531/docufix/Group_1_3_pqdphq.svg" alt="DOCUFIX" id="image"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,27 +30,46 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto px-5" id="navlink">
                 <li class="nav-item">
-                  <a class="nav-link text-center" href="about_us.html">About</a>
+                  <a class="nav-link text-center" href="about_us.php">About</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Tools
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-justify" href="fileUpload.html">Compare files</a>
-                    <a class="dropdown-item text-justify" href="grammarChecker.html">Grammar Check</a>
-                    <a class="dropdown-item text-justify" href="fileDuplicate.html">Duplicates Check</a>
+                    <a class="dropdown-item text-justify" href="fileUpload.php">Compare files</a>
+                    <a class="dropdown-item text-justify" href="grammarChecker.php">Grammar Check</a>
+                    <a class="dropdown-item text-justify" href="fileDuplicate.php">Duplicates Check</a>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-center" href="teampage.html">Our Team</a>
+                  <a class="nav-link text-center" href="teampage.php">Our Team</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link text-center" href="login.php">Login</a>
+               <?php
+                  if(!isset($_SESSION['login_user'])){
+                  echo '
+                  <li class="nav-item">
+                    <a class="nav-link text-center" href="login.php">Login</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-center" href="signup.php">Get Started</a>
                 </li>
+                  ';
+
+
+                }
+                else
+                {
+                    echo '
+                  <li class="nav-item">
+                    <a class="nav-link text-center" href="profile.php">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="logout.php">logout</a>
+                </li>
+                  ';
+                }
+                ?>
                 
               </ul>
             </div>
@@ -86,7 +108,7 @@
            </div>
            
             <div class="text-center disclaimer-btn"> 
-              <!-- <a href="disclaimer.html" class="btn  px-5  btn-outline-dark text-center m-5" style="font-weight: bold;margin-bottom:20px;">Disclaimer</a> -->
+              <!-- <a href="disclaimer.php" class="btn  px-5  btn-outline-dark text-center m-5" style="font-weight: bold;margin-bottom:20px;">Disclaimer</a> -->
             </div>
         </main>
 
@@ -97,26 +119,23 @@
           <div class="container mt-3"><hr>
             <div class="row">
                 <div class="col-sm-6" id="docufix">
-                    <a class="navbar-brand  text-justify" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+                    <a class="navbar-brand  text-justify" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
                     <p class="text-justify">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
                 </div>
               <div class="col-sm-6 text-center">           
                   <ul class="list-inline text-center mt-3 pl-3">  
                       <li class="list-inline-item">
-                        <a class="text-center" href="contact.html">Contact us</a>
+                        <a class="text-center" href="contact.php">Contact us</a>
                       </li>
                       <li class="list-inline-item">
-                          <a class="text-center" href="faq.html">FAQs</a>
+                          <a class="text-center" href="faq.php">FAQs</a>
                         </li>
                         <li class="list-inline-item">
-                        <a class="text-center" href="why-use-docufix.html">Why use Docufix</a>
-                      </li>
+                          <a class="text-center" href="privacy.php">Privacy Policy</a>
+                        </li>
                         <li class="list-inline-item">
-                            <a class="text-center" href="termsOfService.html">Terms and Conditions</a>
+                            <a class="text-center" href="termsOfService.php">Terms of Service</a>
                           </li>
-                      <li class="list-inline-item">
-                          <a class="text-center" href="privacy.html">Privacy Policy</a>
-                      </li>
                       
                     </ul>
               </div>

@@ -1,49 +1,10 @@
 <?php
-include('connect.php');
-session_start();
+      include('connect.php');
+      include 'controller.php';
 
-$message = ''; 
-if(isset($_POST['submit'])){
-    // userEmail and userPassword sent from form 
-    
-    $userEmail = mysqli_real_escape_string($conn,$_POST['email']);
-    $userPassword = mysqli_real_escape_string($conn,$_POST['password']);    
-
-
-    $sql1 = "Select * from users where email = '$userEmail'";
-    $query = mysqli_query($conn, $sql1) or die(mysql_error());
-    $result = mysqli_fetch_assoc($query);
-    $count = mysqli_num_rows($query);
-    if ($count === 1 ) {
-
-            if (password_verify($userPassword, $result["password"])) {
-
-                $_SESSION['login_user'] = $userEmail;
-                $_SESSION['loggedin'] = true;
-                $_SESSION['name'] = $result['firstname'];
-                $_SESSION['login_id'] = $result['id'];
-                $_SESSION['registered_date'] = $result['created_at'];
-                // $_SESSION['plan'] = $result['plan']
-                header("location: profile.php");
-            }
-            else { 
-                     $message = '<p class="text-warning">Invalid login credentials</p>';
-                     echo $message;
-            }
-        } 
-        else {
-        $message = '<p class="text-warning">Invalid login credentials</p>';
-       echo $message;
-    }
-}
+     
 
 ?>
-
-
-
-
-
-
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -65,17 +26,70 @@ if(isset($_POST['submit'])){
     <header>
         <div class="header-wrapper">
             <div class="header-logo">
-                <a class="navbar-brand  " href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+                <a class="navbar-brand  " href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
             </div>
             
-            <div class="header-text">
-                <a>Sign In</a>
-            </div>
+            <a href="signup.php" class="link">Sign up</a>
         </div>
     </header>
 
     <section class="sign-in-container animated finite pulse">
         <h3>Sign in to DOCUFIX</h3>
+           <?php
+                   
+
+                               
+                  
+
+                   
+                    $message = ''; 
+                    if(isset($_POST['submit'])){
+                        // userEmail and userPassword sent from form 
+                        
+                        $userEmail = mysqli_real_escape_string($conn,$_POST['email']);
+                        $userPassword = mysqli_real_escape_string($conn,$_POST['password']);    
+
+
+                        $sql1 = "Select * from users where email = '$userEmail'";
+                        $query = mysqli_query($conn, $sql1) or die(mysql_error());
+                        $result = mysqli_fetch_assoc($query);
+                        $count = mysqli_num_rows($query);
+                        if ($count === 1 ) {
+
+                                if (password_verify($userPassword, $result["password"])) {
+
+                                    $_SESSION['login_user'] = $userEmail;
+                                    $_SESSION['loggedin'] = true;
+                                    $_SESSION['firstname'] = $result['firstname'];
+                                    $_SESSION['lastname'] = $result['lastname'];
+
+                                    $_SESSION['login_id'] = $result['id'];
+                                    $_SESSION['registered_date'] = $result['created_at'];
+                                    // $_SESSION['plan'] = $result['plan']
+                                    if(isset($_GET['redirect'])){
+                                        $redirect= $_GET['redirect'];
+
+                                        header('location: '.$redirect.'');
+       
+                                      }
+                                      else{
+                                         header("location: profile.php");
+                                      }
+                                   
+                                }
+                                else { 
+                                         $message = '<p class="text-warning">Invalid login credentials</p>';
+                                         echo $message;
+                                }
+                            } 
+                            else {
+                            $message = '<p class="text-warning">Invalid login credentials</p>';
+                           echo $message;
+                        }
+                    }
+
+                    ?>
+                    
         <div class="sm-txt">
             <p>Enter your email and password</p>
         </div>
@@ -92,7 +106,7 @@ if(isset($_POST['submit'])){
             <button id="submitData" name="submit" type="submit" class=""  >
                         Continue
                     </button>
-                    <a href="forgot.php" class="forgot__pass__link">Forgot password?</a>
+                    <a href="sendrecoveryemail.php" class="forgot__pass__link">Forgot password?</a>
                     <p class="Already-acc">Don't have an account?&nbsp;&nbsp; <a href="signup.php"><span>Sign up</span></a></p>
             <!-- <h3 class="col-lg-8 text-center">OR</h3> 
             <div class=" btn-grp col-lg-7  justify-content-between">
@@ -115,29 +129,26 @@ if(isset($_POST['submit'])){
         <span class="error"></span>
     </section>
     <footer id="footer">
-          <div class="container-fluid mt-3"><hr>
+          <div class="container mt-3"><hr>
             <div class="row">
                 <div class="col-sm-6" id="docufix">
-                    <a class="navbar-brand  text-justify" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+                    <a class="navbar-brand  text-justify" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
                     <p class="text-justify">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
                 </div>
               <div class="col-sm-6 text-center">           
                   <ul class="list-inline text-center mt-3 pl-3">  
                       <li class="list-inline-item">
-                        <a class="text-center" href="contact.html">Contact us</a>
+                        <a class="text-center" href="contact.php">Contact us</a>
                       </li>
                       <li class="list-inline-item">
-                          <a class="text-center" href="faq.html">FAQs</a>
+                          <a class="text-center" href="faq.php">FAQs</a>
                         </li>
                         <li class="list-inline-item">
-                        <a class="text-center" href="why-use-docufix.html">Why use Docufix</a>
-                      </li>
+                          <a class="text-center" href="privacy.php">Privacy Policy</a>
+                        </li>
                         <li class="list-inline-item">
-                            <a class="text-center" href="termsOfService.html">Terms and Conditions</a>
+                            <a class="text-center" href="termsOfService.php">Terms of Service</a>
                           </li>
-                      <li class="list-inline-item">
-                          <a class="text-center" href="privacy.html">Privacy Policy</a>
-                      </li>
                       
                     </ul>
               </div>

@@ -1,3 +1,6 @@
+<?php
+  include 'controller.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,7 +23,7 @@
         <!--Header-->
         <header>
           <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top">
-            <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572949531/docufix/Group_1_3_pqdphq.svg" alt="DOCUFIX" id="image"></a>
+            <a class="navbar-brand px-sm-5 ml-3" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572949531/docufix/Group_1_3_pqdphq.svg" alt="DOCUFIX" id="image"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span><i class="fa fa-bars" aria-hidden="true" id="toggle"></i></span>
             </button>
@@ -28,27 +31,46 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto px-5" id="navlink">
                 <li class="nav-item">
-                  <a class="nav-link text-center" href="about_us.html">About</a>
+                  <a class="nav-link text-center" href="about_us.php">About</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Tools
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-justify" href="fileUpload.html">Compare files</a>
-                    <a class="dropdown-item text-justify" href="grammarChecker.html">Grammar Check</a>
-                    <a class="dropdown-item text-justify" href="fileDuplicate.html">Duplicates Check</a>
+                    <a class="dropdown-item text-justify" href="fileUpload.php">Compare files</a>
+                    <a class="dropdown-item text-justify" href="grammarChecker.php">Grammar Check</a>
+                    <a class="dropdown-item text-justify" href="fileDuplicate.php">Duplicates Check</a>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-center" href="teampage.html">Our Team</a>
+                  <a class="nav-link text-center" href="teampage.php">Our Team</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link text-center" href="login.php">Login</a>
+                <?php
+                  if(!isset($_SESSION['login_user'])){
+                  echo '
+                  <li class="nav-item">
+                    <a class="nav-link text-center" href="login.php">Login</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-center" href="signup.php">Get Started</a>
                 </li>
+                  ';
+
+
+                }
+                else
+                {
+                    echo '
+                  <li class="nav-item">
+                    <a class="nav-link text-center" href="profile.php">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="logout.php">logout</a>
+                </li>
+                  ';
+                }
+                ?>
                 
               </ul>
             </div>
@@ -170,7 +192,7 @@
                               <div class="card-body px-5 py-2">
                                   
                                       <p>This User Agreement is governed by Nigerian laws. You hereby consent to the exclusive jurisdiction and venue of federal courts in NIgeria, in all disputes arising out of or relating to the use of the Site or the Services. HNG TECH performance of this User Agreement is subject to existing laws and legal process, and nothing contained in this User Agreement is in derogation of HNG TECH right to comply with law enforcement requests or requirements relating to Your use of the Site or the Services or information provided to or gathered by HNG TECH with respect to such use. You agree that any claim or cause of action arising out of or related to the Site or the Services must be commenced within one (1) year after the cause of action arose. Otherwise, such claim or cause of action is barred forever. If any part of this User Agreement is determined to be invalid or unenforceable pursuant to applicable law including, but not limited to, the warranty disclaimers and liability limitations set forth above, then the invalid or unenforceable provision will be deemed superseded by a valid, enforceable provision that most closely matches the intent of the original provision; the remainder of the User Agreement shall continue in effect. A printed version of this User Agreement and of any notice given in electronic form shall be admissible in judicial or administrative proceedings based upon or relating to the User agreement to the same extent and subject to the same conditions as other business documents and records originally generated and maintained in printed form. This User Agreement constitutes the entire agreement between You and HNG TECH with regard to its subject matter and supersedes any and all prior negotiations, representations and agreements, whether written or oral, between the parties.</p>
-                                      <p>Your privacy is important to us HNGI is the educational division of HNG TECH, a company that, as a part of its services, must collect and store specific, private information from its users. As such, HNG TECH adheres to the privacy principles enforced at all HNG TECH web sites. To better protect your privacy we provide this Privacy Policy explaining our online information practices and the choices you can make about the way your personal information is collected and used. This Privacy Policy applies to all personally identifiable information collected or submitted on the <a href="index.html">http://www.docufix.ga</a> website (the "Site"). To make this Privacy Policy easy to find, we make it available on all our pages.</p>
+                                      <p>Your privacy is important to us HNGI is the educational division of HNG TECH, a company that, as a part of its services, must collect and store specific, private information from its users. As such, HNG TECH adheres to the privacy principles enforced at all HNG TECH web sites. To better protect your privacy we provide this Privacy Policy explaining our online information practices and the choices you can make about the way your personal information is collected and used. This Privacy Policy applies to all personally identifiable information collected or submitted on the <a href="index.php">http://www.docufix.ga</a> website (the "Site"). To make this Privacy Policy easy to find, we make it available on all our pages.</p>
                                       <p>This Site in the future might provide links to third-party web sites, they are not covered by this Privacy Policy. HNG TECH assumes no responsibility for the privacy or security of information you provide to any third party through linked web sites or any other means. By using this Site, you agree that you have reviewed and understood our Usage Policy and this Privacy Policy to your full satisfaction, that you accept and are subject to our Usage Policy and this Privacy Policy.</p>
                                      
                               </div>
@@ -202,7 +224,7 @@
                                 </div>
                               </div>
            <div class="text-center mt-2"> 
-                <a href="disclaimer.html" class="btn  px-3  btn btn-primary text-center" id="disclaimer">Disclaimer</a>
+                <a href="disclaimer.php" class="btn  px-3  btn btn-primary text-center" id="disclaimer">Disclaimer</a>
                </div>
           </section>    
         </main>
@@ -214,27 +236,23 @@
           <div class="container mt-3"><hr>
             <div class="row">
                 <div class="col-sm-6" id="docufix">
-                    <a class="navbar-brand  text-justify" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+                    <a class="navbar-brand  text-justify" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
                     <p class="text-justify">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
                 </div>
               <div class="col-sm-6 text-center">           
                   <ul class="list-inline text-center mt-3 pl-3">  
                       <li class="list-inline-item">
-                        <a class="text-center" href="contact.html">Contact us</a>
+                        <a class="text-center" href="contact.php">Contact us</a>
                       </li>
                       <li class="list-inline-item">
-                          <a class="text-center" href="faq.html">FAQs</a>
+                          <a class="text-center" href="faq.php">FAQs</a>
                         </li>
                         <li class="list-inline-item">
-                        <a class="text-center" href="why-use-docufix.html">Why use Docufix</a>
-                      </li>
+                          <a class="text-center" href="privacy.php">Privacy Policy</a>
+                        </li>
                         <li class="list-inline-item">
-                            <a class="text-center" href="termsOfService.html">Terms and Conditions</a>
+                            <a class="text-center" href="termsOfService.php">Terms of Service</a>
                           </li>
-                      <li class="list-inline-item">
-                          <a class="text-center" href="privacy.html">Privacy Policy</a>
-                      </li>
-                      
                     </ul>
               </div>
             </div>

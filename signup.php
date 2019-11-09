@@ -42,8 +42,11 @@ if(isset($_POST['submit'])){
                 $sql = "SELECT email FROM users WHERE email = '$userEmail' ";
                 $result = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($result) > 0) {
-                  die('email address exists');
+                    $message = '<p class="text-warning">Email address exists</p>';
+                                         echo $message;
+                 // echo 'Email address exists';
                    }
+
                 else { 
 
                     $sql = "INSERT INTO users(firstname, lastname, email, password)
@@ -55,13 +58,22 @@ if(isset($_POST['submit'])){
                            $result = mysqli_query($conn , $sql);
                     if($result){
                                     $message .= '<div class="alert alert-success" role="alert">
-                                    Record Saved Successfully <button class="btn"><a href = "index.html">Home</a></button></div>';
+                                    Sign up successful <button class="btn"><a href = "index.php">Home</a></button></div>';
                                             echo ($message);
+
+                                            $_SESSION['login_user'] = $userEmail;
+                                            $_SESSION['loggedin'] = true;
+                                            $_SESSION['firstname'] = $result['firstname'];
+                                            $_SESSION['lastname'] = $result['lastname'];
+                                            $_SESSION['login_id'] = $result['id'];
+                                            $_SESSION['registered_date'] = $result['created_at'];
+
+                                            header("location: login.php");
 
                     }
                     else{
                         $message .= '<div class="alert alert-danger" role="alert">
-                        Record not Saved ' . mysqli_error($conn) . '<button class="btn"><a href = "index.html">Home</a></button>
+                        Sign up unsuccesful. ' . mysqli_error($conn) . '<button class="btn"><a href = "index.php">Home</a></button>
                         </div>';
                     
                     }
@@ -71,6 +83,7 @@ if(isset($_POST['submit'])){
 
     }
  ?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -92,12 +105,10 @@ if(isset($_POST['submit'])){
     <header>
         <div class="header-wrapper">
             <div class="header-logo">
-                <a class="navbar-brand  " href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+                <a class="navbar-brand  " href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
             </div>
             
-            <div class="header-text">
-                <h3>Sign In</h3>
-            </div>
+            <a href="login.php">Sign in</a>
         </div>
     </header>
 
@@ -108,24 +119,24 @@ if(isset($_POST['submit'])){
         </div>
         <form method="POST" action="">
 
-            <div class="form-group">
+            <div class="">
                 <input type="text" id="name" name="firstname" placeholder="First Name" pattern="[a-zA-Z]{1,}" data-toggle="tooltip" data-placement="bottom" title="Enter Your First Name" required><span class="error"></span>
             </div>
 
-            <div class="form-group">
+            <div class="">
                 <input type="text" id="name" name="lastname" placeholder="Last Name"  pattern="[a-zA-Z]{1,}" data-toggle="tooltip" data-placement="bottom" title="Enter Your Last Name" required><span class="error"></span>
             </div>
 
-            <div class="form-group">
+            <div class="">
                 <input type="email" aria-describedby="emailHelp" placeholder="Your email address" id="emailAddress" name="email"  data-toggle="tooltip" data-placement="bottom" title="Please enter a valid Email Address" required><span class="error"></span>
             </div>
 
-            <div class="form-group">
+            <div class="">
                 <input type="password" name="password" id="password" class="form-control" placeholder="Your password" data-toggle="tooltip" data-placement="bottom"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
             </div>
 
-            <div class="form-group">
+            <div class="">
                 <input type="password" name="verify_password" id="confirmPassword" placeholder="Confirm password" data-toggle="tooltip" data-placement="bottom" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                 title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><span class="error"></span>
             </div>
@@ -156,26 +167,23 @@ if(isset($_POST['submit'])){
           <div class="container mt-3"><hr>
             <div class="row">
                 <div class="col-sm-6" id="docufix">
-                    <a class="navbar-brand  text-justify" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+                    <a class="navbar-brand  text-justify" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
                     <p class="text-justify">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
                 </div>
               <div class="col-sm-6 text-center">           
                   <ul class="list-inline text-center mt-3 pl-3">  
                       <li class="list-inline-item">
-                        <a class="text-center" href="contact.html">Contact us</a>
+                        <a class="text-center" href="contact.php">Contact us</a>
                       </li>
                       <li class="list-inline-item">
-                          <a class="text-center" href="faq.html">FAQs</a>
+                          <a class="text-center" href="faq.php">FAQs</a>
+                        </li>
+                       <li class="list-inline-item">
+                          <a class="text-center" href="privacy.php">Privacy Policy</a>
                         </li>
                         <li class="list-inline-item">
-                        <a class="text-center" href="why-use-docufix.html">Why use Docufix</a>
-                      </li>
-                        <li class="list-inline-item">
-                            <a class="text-center" href="termsOfService.html">Terms and Conditions</a>
+                            <a class="text-center" href="termsOfService.php">Terms of Service</a>
                           </li>
-                      <li class="list-inline-item">
-                          <a class="text-center" href="privacy.html">Privacy Policy</a>
-                      </li>
                       
                     </ul>
               </div>

@@ -1,9 +1,12 @@
+<?php
+  include 'controller.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Docufix | ABOUT US</title>
+        <title>Docufix | About Us</title>
         <meta name="description" content="About Us">
         <meta name="theme-color" content="#3B1F9E" />
         <link rel="manifest" href="manifest.json" />
@@ -19,7 +22,7 @@
         <!--Header-->
         <header>
           <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top">
-            <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572949531/docufix/Group_1_3_pqdphq.svg" alt="DOCUFIX" id="image"></a>
+            <a class="navbar-brand px-sm-5 ml-3" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572949531/docufix/Group_1_3_pqdphq.svg" alt="DOCUFIX" id="image"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto px-5" id="navlink">
                 <li class="nav-item">
-                  <a class="nav-link text-center" href="about_us.html">About</a>
+                  <a class="nav-link text-center" href="about_us.php">About</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -40,14 +43,33 @@
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-center" href="teampage.html">Our Team</a>
+                  <a class="nav-link text-center" href="teampage.php">Our Team</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link text-center" href="login.php">Login</a>
+                <?php
+                  if(!isset($_SESSION['login_user'])){
+                  echo '
+                  <li class="nav-item">
+                    <a class="nav-link text-center" href="login.php">Login</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-center" href="signup.php">Get Started</a>
                 </li>
+                  ';
+
+
+                }
+                else
+                {
+                    echo '
+                  <li class="nav-item">
+                    <a class="nav-link text-center" href="profile.php">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="logout.php">logout</a>
+                </li>
+                  ';
+                }
+                ?>
                 
               </ul>
             </div>
@@ -104,12 +126,12 @@
                           <div class="card-body">
                               <p>Docufix.io gives you tools such as: </p>
                               <ol>
-                                  <li><a href="fileUpload.html">File Comparison</a>: An easy to use tool that helps you to compare your files and documents.</li>
-                                  <li><a href="fileDuplicate.html">Word Duplicates</a>: An easy to use tool that helps you remove all duplicates of words in your files and documents.</li>
-                                  <li><a href="grammarChecker.html">Grammar Checker</a>: An easy to use tool that helps you check for grammatical errors in your files and documents.</li>
+                                  <li><a href="fileUpload.php">File Comparison</a>: An easy to use tool that helps you to compare your files and documents.</li>
+                                  <li><a href="fileDuplicate.php">Word Duplicates</a>: An easy to use tool that helps you remove all duplicates of words in your files and documents.</li>
+                                  <li><a href="grammarChecker.php">Grammar Checker</a>: An easy to use tool that helps you check for grammatical errors in your files and documents.</li>
                               </ol>  
                               <p>...and many other useful tools.</p>
-                              <p>Why not visit our tools tab, try out any of our feature tools and send us <a href="contact.html">feedback or recommendations</a>.</p>
+                              <p>Why not visit our tools tab, try out any of our feature tools and send us <a href="contact.php">feedback or recommendations</a>.</p>
                           </div>
                         </div>
                       </div>
@@ -119,7 +141,7 @@
            </div>
            
             <div class="text-center"> 
-                <a href="disclaimer.html" class="btn  px-5  btn-outline-dark text-center m-5" style="font-weight: bold;margin-bottom:20px;">Disclaimer</a>
+                <a href="disclaimer.php" class="btn  px-5  btn-outline-dark text-center m-5" style="font-weight: bold;margin-bottom:20px;">Disclaimer</a>
                </div>
         </main>
 
@@ -130,26 +152,23 @@
           <div class="container mt-3"><hr>
             <div class="row">
                 <div class="col-sm-6" id="docufix">
-                    <a class="navbar-brand  text-justify" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+                    <a class="navbar-brand  text-justify" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
                     <p class="text-justify">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
                 </div>
               <div class="col-sm-6 text-center">           
                   <ul class="list-inline text-center mt-3 pl-3">  
                       <li class="list-inline-item">
-                        <a class="text-center" href="contact.html">Contact us</a>
+                        <a class="text-center" href="contact.php">Contact us</a>
                       </li>
                       <li class="list-inline-item">
-                          <a class="text-center" href="faq.html">FAQs</a>
+                          <a class="text-center" href="faq.php">FAQs</a>
                         </li>
                         <li class="list-inline-item">
-                        <a class="text-center" href="why-use-docufix.html">Why use Docufix</a>
-                      </li>
+                          <a class="text-center" href="privacy.php">Privacy Policy</a>
+                        </li>
                         <li class="list-inline-item">
-                            <a class="text-center" href="termsOfService.html">Terms and Conditions</a>
+                            <a class="text-center" href="termsOfService.php">Terms of Service</a>
                           </li>
-                      <li class="list-inline-item">
-                          <a class="text-center" href="privacy.html">Privacy Policy</a>
-                      </li>
                       
                     </ul>
               </div>
