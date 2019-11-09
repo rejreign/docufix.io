@@ -29,7 +29,7 @@
                 <a class="navbar-brand  " href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
             </div>
             
-            <a href="signup.php">Sign up</a>
+            <a href="signup.php" class="link">Sign up</a>
         </div>
     </header>
 
