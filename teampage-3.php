@@ -109,7 +109,7 @@
                                        <h3>Bisiriyu Daniel</h3>
                                        <p>Front-End Developer</p>
                                    </div>
-                                   <div class="user-content"><b>About us page</b>
+                                   <div class="user-content">
                                        <p class="text-center pt-5">SlackUsername : @leye</p>
                                    </div>
                                </div>
@@ -140,7 +140,7 @@
                                        <h3>Tolulope David</h3>
                                        <p>Backend</p>
                                    </div>
-                                   <div class="user-content"><b>Text comparison page</b>
+                                   <div class="user-content">
                                        <p class="text-center pt-5">SlackUsername : @Tolulope_David</p>
                                    </div>
                                </div>

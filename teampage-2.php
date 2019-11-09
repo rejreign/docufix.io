@@ -102,7 +102,7 @@
                                          <h3>Kazeem David</h3>
                                          <p>Back-End Developer</p>
                                      </div>
-                                     <div class="user-content"><b> Control Access to Docufix tools, Account Recovery, and Integrate payment.</b>
+                                     <div class="user-content">
                                          <p class="text-center pt-5">SlackUsername : @davon_jagah</p>
                                      </div>
                                  </div>
@@ -132,7 +132,7 @@
                                          <h3>Chidiebere Chukwudi</h3>
                                          <p>Back-End Developer</p>
                                      </div>
-                                     <div class="user-content"><b>Php script for file comparison</b>
+                                     <div class="user-content">
                                          <p class="text-center pt-5">SlackUsername : @jovial</p>
                                      </div>
                                  </div>
@@ -163,7 +163,7 @@
                                        <h3>Martini Mabifa</h3>
                                        <p>FrontEnd</p>
                                    </div>
-                                   <div class="user-content"><b>About Page</b>
+                                   <div class="user-content">
                                        <p class="text-center pt-5">SlackUsername : @Martini Mabifa</p>
                                    </div>
                                </div>
@@ -194,7 +194,7 @@
                                          <h3>Omotoso Yusuf</h3>
                                          <p>Front-End</p>
                                      </div>
-                                     <div class="user-content"><b>Linked pages</b>
+                                     <div class="user-content">
                                          <p class="text-center pt-5">SlackUsername : @OmotosoYusuf  </p>
                                      </div>
                                  </div>
@@ -225,7 +225,7 @@
                                          <h3>Yusuf Ismaila</h3>
                                          <p>Front-End</p>
                                      </div>
-                                     <div class="user-content"><b>Header & Footer - Index.php</b>
+                                     <div class="user-content">
                                          <p class="text-center pt-5">SlackUsername : @YUSUF</p>
                                      </div>
                                  </div>
@@ -256,7 +256,7 @@
                                          <h3>Samson Emeje</h3>
                                          <p>Front-End</p>
                                      </div>
-                                     <div class="user-content"><b>Document Analysis Page</b>
+                                     <div class="user-content">
                                          <p class="text-center pt-5">SlackUsername : @Genghis Khan</p>
                                      </div>
                                  </div>
@@ -287,7 +287,7 @@
                                          <h3>Ogidiagba Henry Oghenetejiri</h3>
                                          <p>Front-End</p>
                                      </div>
-                                     <div class="user-content"><b>Team Page</b>
+                                     <div class="user-content">
                                          <p class="text-center pt-3">SlackUsername : @Henry Teejay</p>
                                      </div><br>
                                  </div>
@@ -318,7 +318,7 @@
                                          <h3>Osunkunle Olanrewaju</h3>
                                          <p>Front-End</p>
                                      </div>
-                                     <div class="user-content"><b>Text Comparison Page</b>
+                                     <div class="user-content">
                                       <br><br>
                                          <p class="text-center pt-5">SlackUsername : @lario </p>
                                      </div>
@@ -350,7 +350,7 @@
                                          <h3>Christian Ani</h3>
                                          <p>Front-End</p>
                                      </div>
-                                     <div class="user-content"><b>Team Page</b>
+                                     <div class="user-content">
                                       <br><br>
                                          <p class="text-center pt-5">SlackUsername : @anikriz</p>
                                      </div>

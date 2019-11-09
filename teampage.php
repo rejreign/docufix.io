@@ -105,9 +105,9 @@
                                <div class="content-part back text-center">
                                    <div class="user-info">
                                        <h3>Mercy Temi Inyang</h3>
-                                       <p>Front-End Developer</p>
+                                       <p>Front-End Developer/Team lead</p>
                                    </div>
-                                   <div class="user-content"><b>Team lead</b>
+                                   <div class="user-content">
                                        <p class="text-center pt-5">SlackUsername : @Miss Temi</p>
                                    </div>
                                </div>
@@ -137,7 +137,8 @@
                                          <h3>Samuel Egbajie</h3>
                                          <p>Front-End Developer</p>
                                      </div>
-                                     <div class="user-content"><b>Worked on Comparison Algorithm ,Built a WYSIWYG text editor, Added downloadable feature As .pdf and .doc files format.</b>
+                                     <br>
+                                     <div class="user-content">
                                          <p class="text-center pt-4">SlackUsername : @Major</p>
                                      </div>
                                  </div>
@@ -167,7 +168,7 @@
                                          <h3>Onasanya Tunde</h3>
                                          <p>Front-End Developer</p>
                                      </div>
-                                     <div class="user-content"><b>Worked on the API endpoint that converts the files uploaded to plain text.</b>
+                                     <div class="user-content">
                                          <p class="text-center pt-5">SlackUsername : @Rammy</p>
                                      </div>
                                  </div>
@@ -198,9 +199,7 @@
                                          <h3>Kingsley Umujeyan</h3>
                                          <p>Front-End Developer</p>
                                      </div>
-                                     <div class="user-content"><b>Team Page</b>
-                                      <br>
-                                      <br>
+                                     <div class="user-content">
                                          <p class="text-center pt-5">SlackUsername : @kuic</p>
                                      </div>
                                  </div>
@@ -231,7 +230,7 @@
                                          <h3>Ademola Madelewi</h3>
                                          <p>Front-End Developer</p>
                                      </div>
-                                     <div class="user-content"><b>Homepage, File-Upload page and Comparison Algorithm</b>
+                                     <div class="user-content">
                                          <p class="text-center pt-5">SlackUsername : @AdemolaM</p>
                                      </div>
                                  </div>
@@ -262,7 +261,7 @@
                                          <h3>Isuma Chidera</h3>
                                          <p>Backend | Project Management</p>
                                      </div>
-                                     <div class="user-content"><b>Project Manager</b>
+                                     <div class="user-content">
                                          <p class="text-center pt-5">SlackUsername : @Cross-pm</p>
                                      </div>
                                  </div>
@@ -293,7 +292,7 @@
                                          <h3>Chidiebere Chukwudi</h3>
                                          <p>Back-End Developer</p>
                                      </div>
-                                     <div class="user-content"><b>Php script for file comparison</b>
+                                     <div class="user-content">
                                          <p class="text-center pt-5">SlackUsername : @jovial</p>
                                      </div>
                                  </div>
@@ -324,9 +323,7 @@
                                          <h3>Prosper Ndubueze </h3>
                                          <p>Front-End Developer</p>
                                      </div>
-                                     <div class="user-content"><b>File and text comparison page frontend</b>
-                                      <br>
-                                      <br>
+                                     <div class="user-content">
                                          <p class="text-center pt-5">SlackUsername : @Ros4eva</p>
                                      </div>
                                  </div>
@@ -357,7 +354,7 @@
                                          <h3>Sydney J. Ekpo</h3>
                                          <p>Devops</p>
                                      </div>
-                                     <div class="user-content"><b>Configured Server block - docufix.ga</b>
+                                     <div class="user-content">
                                          <p class="text-center pt-5">SlackUsername : @Sydney</p>
                                      </div>
                                  </div>
