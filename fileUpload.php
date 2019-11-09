@@ -151,8 +151,8 @@
                         <div class="mx-auto" style="border: 1px solid rgba(222, 230, 234, 0.6); background: #F6F8F9">
                           <div class="p-4">
                               <h5 class="pb-4 font-weight-bold" style="color: rgba(12, 10, 90, 0.8)">Other Tools:</h5>
-                              <a href="grammarChecker.html" class="btn btn-sm rounded-pill font-weight-bold" style="color: rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Grammar check</a>
-                                          <a href="fileDuplicate.html" class="btn btn-sm rounded-pill font-weight-bold" style="color:rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Duplicates check</a>
+                              <a href="grammarChecker.php" class="btn btn-sm rounded-pill font-weight-bold" style="color: rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Grammar check</a>
+                                          <a href="fileDuplicate.php" class="btn btn-sm rounded-pill font-weight-bold" style="color:rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Duplicates check</a>
                                           <div class="btn float-right" style="cursor: pointer;color: rgba(12, 10, 90, 0.8)"  onclick="instruction()"> Instructions</div>
                           </div>
                        
@@ -230,7 +230,7 @@
                     </div>
                     <div class="form-group mt-4" style="margin-bottom: 1em;">
                       <button style="background-color:  #3B1F9E;color: white;" id="uploadBtn" type="submit" value="submit"
-                        class="btn text-light rounded-pill px-5">Compare</button>
+                        class="btn text-light rounded-pill px-5">Upload</button>
           
                          
                     </div>
@@ -444,7 +444,7 @@
                          <button type="button" class="btn mt-2 mb-0 mb-md-5" data-toggle="modal" data-target="#myModal" style="background-color:  #3B1F9E; color: white;"><i class="fas fa-cloud-download-alt"></i>Download <strong>HERE</strong></button>
 
                          <!--JOVIA SAV AS EMAIL BUTTON-->
-                      <button id ="btn" onclick="CopyDivsToTextArea();" data-toggle="modal"  data-target="#myModal2" class="btn mt-2 mb-0 mb-md-5 text-light" style="background-color:  #3B1F9E"><i class="fas fa-cloud-download-alt"></i>Save As <strong>Email</strong></button>
+                      <button id ="btn" onclick="CopyDivsToTextArea();" data-toggle="modal"  data-target="#myModal2" class="btn mt-2 mb-0 mb-md-5 text-light" style="background-color:  #3B1F9E"> <strong>Email</strong></button>
                     </div>
               
                      
@@ -470,12 +470,12 @@
                           <br />
             
                           <input type="text" placeholder="Please Specify Document Name..." id="saveAs" required></input><br/>
-                          <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i
+                          <button id="btn-export" onclick="exportHTML();" class="mt-2 mb-5" style="padding: 7px 14px; background-color:  #3B1F9E; color: white;"><i
                               class="fas fa-cloud-download-alt"></i> Download as word
                             doc</button>
-                          <button id="cmd" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i
-                              class="fas fa-cloud-download-alt"></i>Download as PDF</button>
-                              <button id="btn-export" onclick="txt();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i
+                          <button id="cmd" class="mt-2 mb-5"style =" padding: 7px 14px; background-color:  #3B1F9E; color: white;"><i
+                              class="fas fa-cloud-download-alt" ></i>Download as PDF</button>
+                              <button id="btn-export" onclick="txt();" class="mt-2 mb-5" style="padding: 7px 14px; background-color:  #3B1F9E; color: white;""><i
                                 class="fas fa-cloud-download-alt"></i> Download as .txt
                         </button>
                         
@@ -489,8 +489,6 @@
                 </div>
 
                
-          
-
           
 
                   <!--JOVIAL SAVE AS EMAIL MODAL-->
@@ -521,16 +519,15 @@
               <!--  -->
                
                     <div class="modal-footer">
-                            <button type="submit" name="submit" id="closeSend" class="btn btn-default">Send!</button>
+                            <button type="submit" name="submit" id="closeSend" class="btn btn-default" style="padding: 7px 14px; background-color:  #3B1F9E; color: white;">Send!</button>
                       </form>
             
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-default" data-dismiss="modal" style="padding: 7px 14px; background-color:  #3B1F9E; color: white;">Close</button>
                     </div>
                   </div>
                   
                 </div>
               </div>
-            
 
                 <!---MODAL FOR SAVE AS-->
           
@@ -581,27 +578,23 @@
           <div class="container mt-3"><hr>
             <div class="row">
                 <div class="col-sm-6" id="docufix">
-                    <a class="navbar-brand  text-justify" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+                    <a class="navbar-brand  text-justify" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
                     <p class="text-justify">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
                 </div>
               <div class="col-sm-6 text-center">           
                   <ul class="list-inline text-center mt-3 pl-3">  
                       <li class="list-inline-item">
-                        <a class="text-center" href="contact.html">Contact us</a>
+                        <a class="text-center" href="contact.php">Contact us</a>
                       </li>
                       <li class="list-inline-item">
-                          <a class="text-center" href="faq.html">FAQs</a>
+                          <a class="text-center" href="faq.php">FAQs</a>
                         </li>
                         <li class="list-inline-item">
-                        <a class="text-center" href="why-use-docufix.html">Why use Docufix</a>
-                      </li>
+                          <a class="text-center" href="privacy.php">Privacy Policy</a>
+                        </li>
                         <li class="list-inline-item">
-                            <a class="text-center" href="termsOfService.html">Terms and Conditions</a>
+                            <a class="text-center" href="termsOfService.php">Terms of Service</a>
                           </li>
-                      <li class="list-inline-item">
-                          <a class="text-center" href="privacy.html">Privacy Policy</a>
-                      </li>
-                      
                     </ul>
               </div>
             </div>
