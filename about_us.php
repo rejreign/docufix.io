@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Docufix | ABOUT US</title>
+        <title>Docufix | About Us</title>
         <meta name="description" content="About Us">
         <meta name="theme-color" content="#3B1F9E" />
         <link rel="manifest" href="manifest.json" />

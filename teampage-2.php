@@ -397,36 +397,32 @@
  
 				<!--Footer-->
 				<footer id="footer">
-                  <div class="container mt-3"><hr>
-                    <div class="row">
-                        <div class="col-sm-6" id="docufix">
-                            <a class="navbar-brand  text-justify" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
-                            <p class="text-justify">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
-                        </div>
-                      <div class="col-sm-6 text-center">           
-                          <ul class="list-inline text-center mt-3 pl-3">  
-                              <li class="list-inline-item">
-                                <a class="text-center" href="contact.php">Contact us</a>
-                              </li>
-                              <li class="list-inline-item">
-                                  <a class="text-center" href="faq.php">FAQs</a>
-                                </li>
-                                <li class="list-inline-item">
-                                <a class="text-center" href="why-use-docufix.php">Why use Docufix</a>
-                              </li>
-                                <li class="list-inline-item">
-                                    <a class="text-center" href="termsOfService.php">Terms and Conditions</a>
-                                  </li>
-                              <li class="list-inline-item">
-                                  <a class="text-center" href="privacy.php">Privacy Policy</a>
-                              </li>
-                              
-                            </ul>
-                      </div>
-                    </div>
-                  </div>
-                
-          </footer>
+          <div class="container mt-3"><hr>
+            <div class="row">
+                <div class="col-sm-6" id="docufix">
+                    <a class="navbar-brand  text-justify" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+                    <p class="text-justify">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
+                </div>
+              <div class="col-sm-6 text-center">           
+                  <ul class="list-inline text-center mt-3 pl-3">  
+                      <li class="list-inline-item">
+                        <a class="text-center" href="contact.php">Contact us</a>
+                      </li>
+                      <li class="list-inline-item">
+                          <a class="text-center" href="faq.php">FAQs</a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="text-center" href="privacy.php">Privacy Policy</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="text-center" href="termsOfService.php">Terms of Service</a>
+                          </li>
+                    </ul>
+              </div>
+            </div>
+          </div>
+        
+  </footer>
 		   
        
       <script src="js/app.js"></script>

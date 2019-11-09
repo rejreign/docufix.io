@@ -248,15 +248,11 @@
                           <a class="text-center" href="faq.php">FAQs</a>
                         </li>
                         <li class="list-inline-item">
-                        <a class="text-center" href="why-use-docufix.php">Why use Docufix</a>
-                      </li>
-                        <li class="list-inline-item">
                           <a class="text-center" href="privacy.php">Privacy Policy</a>
                         </li>
                         <li class="list-inline-item">
                             <a class="text-center" href="termsOfService.php">Terms of Service</a>
                           </li>
-                      
                     </ul>
               </div>
             </div>
