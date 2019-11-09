@@ -405,7 +405,7 @@
                   ';
                 }
                 ?>
-                              <button class="btn rounded-pill resetBtn" id="resetbutton">Reset</button>
+                              <button class="btn rounded-pill resetBtn" id="resetbutton" style="margin-top: 10px;">Reset</button>
                           </div>
                             
                 </form>
