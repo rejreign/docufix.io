@@ -269,14 +269,14 @@ font-weight: bold;
                <a class="bt btn-sm rounded-pill font-weight-bold mt-md-0 mt-2" style="color:rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)" href = "fileDuplicate.php">Check Duplicates</a>
      </br>
                
-               <div class="btn float-right" data-toggle="modal" data-target="#myModal2" style="cursor: pointer;color: rgba(12, 10, 90, 0.8)"  onclick="instruction()"> Instructions</div>
+               <div class="float-right" data-toggle="modal" data-target="#myModal2" style="cursor: pointer;color: rgba(12, 10, 90, 0.8)"  onclick="instruction()"> Instructions</div>
              </div>
    </div>
  <article>
  <div>
 
 
-     <form name="checkform" action="http://community.languagetool.org" method="post" style = "padding: 20px; box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1); width:100%"  id = "form">
+     <form name="checkform" action="http://community.languagetool.org" method="post" style = "padding: 20px; box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1); width:100%;"  id = "form">
          
        
          
@@ -285,11 +285,12 @@ font-weight: bold;
             <div class ="h">
                <table>
 
-                 <td> <tr><input type="button"  class="b-btn comp-btn bu" id ="b3" data-toggle="modal" data-target="#myModal"  value = "Dictionary"></td>
+                 <td> <tr><input type="button"  class="b-btn comp-btn bu" id ="b3" data-toggle="modal" data-target="#myModal"  value = "Dictionary">
                  <!--<td> <input type="button" style="padding-left: 10px; padding-right: 10px; width: 100px; background-color: rgb(12, 10, 90); border-radius: 4px; height: 30px;" class="b-btn comp-btn" data-toggle="modal" data-target="#myModal2"  value ="Help">-->
 
-                  
-                 
+                 </tr>
+                 <tr style = "color: white">  ... </tr>
+                 <tr>
                  <select name="lang" id="lang" class="b-btn comp-btn bu">
                      <option value="en-US">English</option>
                      <option value="de-DE">German</option>
@@ -312,15 +313,16 @@ font-weight: bold;
          <div style="padding-top:150px"></div>
             <input  id = "b2" type="submit" name="_action_checkText"
                  value="Check Text" onClick="doit();return false;" style="padding-left: 10px; padding-right: 10px; width: 250px; background-color:  #3B1F9E; border-radius: 20px;
-box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05); height: 40px; color: white" class="b-btn comp-btn"> 
+box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05); height: 40px; color: white; font-weight: bold;" class="b-btn comp-btn"> 
             
                    
                  <div id="feedbackErrorMessage" style="color: red;"></div>
          </div>
+
+         
         
        </section>
        </form>
-       
        </article>
 <br>
 <br>
@@ -382,7 +384,7 @@ box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05); height: 40px; color: white" class=
 box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05); height: 20px; color: white" class="b-btn comp-btn"> 
             
              <div>The button enables users to check for errors in the text field when clicked. After clicking on this button, grammatical, puntuations and spelling errors are highlighted, and that allows the user to right-click on the highlighted texts. When that is done, a quick corrections comes as a dropdown which enables the user to select the appropriate. </div>
-             <div>After the first click, the grammar might not be totally correct, which means a user should keep on checking till no more see highlighted texts are seen.</div>
+             <div>After the first click, the grammar might not be totally correct, which means a user should keep on checking till no more see highlighted texts are.</div>
                <br/>
                
                <!--<input type="submit" name="_action_checkText"
@@ -412,8 +414,7 @@ box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05); height: 20px; color: white" class=
    </div>
  </div>
  </div>
-<br>
-<br>
+
  <footer id="footer">
        <div class="container mt-3"><hr>
          <div class="row">
@@ -574,3 +575,4 @@ box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05); height: 20px; color: white" class=
 </body>
 </html>
      
+
