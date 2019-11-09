@@ -204,7 +204,7 @@ margin-top: 5px;
     /* identical to box height */
     
     margin-top: 27px;
-    margin-bottom: 15px;
+    margin-bottom: 10px !important;
     color: #FFFFFF;
     clear: both;
     
