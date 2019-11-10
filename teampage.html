@@ -24,7 +24,8 @@
 			background-size: cover;
 			background-position: center;
 			display: flex;
-			align-items: center;
+      align-items: center;
+      background-color: #fafafa !important;
 		  }
 		  
 		  .our-team {
@@ -130,6 +131,10 @@
 		  .team-content p{
         font-size: 0.8em;
       }
+      .team-content h3{
+        font-size: 1.4em;
+        color: #3B1F9E !important;
+      }
 		  .our-team .social li a:hover{
 			background-color: #f7f5ec;
 		  }
@@ -144,13 +149,30 @@
 		   }
        .our-team .social li .fa-twitter:hover{
 			   color: #1DA1F2;
-		   }
+       }
+       @media only screen and (max-width: 500px){
+         .our-team{
+           width: 75%;
+           margin: 5% auto;
+         }
+         .our-team .picture img{
+           width: 75%;
+           height: 75%;
+           
+         }
+         .our-team .picture::after {
+           width: 50%;
+           height: 0;
+         }
+       }
     </style>
     <body>
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top scrolling-navbar" id="nav">
-              <div class="container">
-                  <a class="navbar-brand" href="index.php" id="logo">
+              <div class="container-fluid">
+                  <a class="navbar-brand ml-3
+                  
+                  " href="index.php" id="logo">
                       <img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" class="image">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="btn">
@@ -187,7 +209,7 @@
           </header>  
           <div class="container mt-5">
               <div class="content-title">
-                  <h3 class="team text-center">Meet Our Team</h3>
+                  <h2 class="team text-center">Meet Our Team</h2>
         <div class="content-title-underline line"></div>
             <div class="row">
               <div class="col-12 col-sm-6 col-md-4 col-lg-3">
