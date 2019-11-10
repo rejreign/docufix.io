@@ -14,6 +14,7 @@
 	  <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
     <link rel="stylesheet" type="text/css" href="css/teampage.css">
     
+    
     </head>
     <style>
       body {
@@ -29,11 +30,14 @@
 		  .our-team {
 			padding: 30px 0 40px;
 			margin-bottom: 30px;
-			background-color: #f7f5ec;
+			background-color: #fff;
 			text-align: center;
 			overflow: hidden;
-			position: relative;
-		  }
+      position: relative;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+      border-radius: 16px;
+      }
+      
 		  
 		  .our-team .picture {
 			display: inline-block;
@@ -56,7 +60,7 @@
 			left: 0;
 			opacity: 0.9;
 			transform: scale(3);
-			transition: all 0.3s linear 0s;
+      transition: all 0.3s linear 0s;
 		  }
 		  
 		  .our-team:hover .picture::before {
@@ -123,7 +127,9 @@
 			transition: all 0.3s ease 0s;
 			text-decoration: none;
 		  }
-		  
+		  .team-content p{
+        font-size: 0.8em;
+      }
 		  .our-team .social li a:hover{
 			background-color: #f7f5ec;
 		  }
@@ -543,12 +549,14 @@
                         <li><a href="https://web.facebook.com/" target="_blank" class="fa fa-facebook" aria-hidden="true"></a></li>  
                     </ul>
                   </div>
-              </div><hr>
+              </div>
+              
+                <hr>
               <div class="col-sm-5" id="docufix">
                 <a class="navbar-brand  text-justify" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" class="text-justify" alt="DOCUFIX" id="image"></a>
                 <p class="text-justify">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
             </div>
-          <div class="col-sm-7 text-center">           
+          <div class="col-sm-7 text-center" id="footer">           
               <ul class="list-inline text-center mt-3 pl-3">  
                   <li class="list-inline-item">
                     <a class="text-center" href="contact.html">Contact us</a>
@@ -568,15 +576,21 @@
                   
                 </ul>
           </div>
+          
+              
             </div>
           </div>
           <script src="app.js"></script>
       <script src="js/team.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
                 
+        <script>
+          AOS.init();
+        </script>                
           <script>
             var SCROLLING_NAVBAR_OFFSET_TOP = 100;
             $(window).on("scroll", function() {
