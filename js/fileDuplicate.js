@@ -147,7 +147,8 @@ function getCookie(name) {
                     $(".progress").attr("style", "display: none " );
                     progress.remove()
                     let delimiter = $('#delimiter').val();
-                    duplicateChecker(response.file1, delimiter)
+                    let checkerType = 'fileDuplicate';
+                    duplicateChecker(response.file1, delimiter, checkerType)
                     // $('#textareaDifferences').val(response.file1)
                     toastr.success("Content Loaded Successfully");
                     
@@ -179,7 +180,8 @@ function getCookie(name) {
         let delimiter = $('#delimiterText').val();
         // console.log(firstString.split(','));
         
-        duplicateChecker(firstString, delimiter)
+        let checkerType = 'textDuplicate'
+        duplicateChecker(firstString, delimiter, checkerType)
 
     // let firstStringSet = new Set(firstString.split(new RegExp(separators.join('|'), 'g')))
     // let secondStringSet = new Set(secondString.split(new RegExp(separators.join('|'), 'g')))
@@ -290,8 +292,10 @@ $('#uploadURLForm').submit(function(e) {
               console.log('success');
               console.log(response);
               $(".progress").attr("style", "display: none " );
-              progress.remove()
-              $('#textareaDifferences').val(response.file1)
+              progress.remove();
+              let delimiter = $('#delimiter').val();
+              let checkerType = 'fileDuplicate';
+              duplicateChecker(response.file1, delimiter, checkerType)      
               toastr.success("Content Loaded Successfully");
               
           },
@@ -322,9 +326,14 @@ $('#resetbutton').click(function(e) {
 })
 
 
-function duplicateChecker(text, delimiter) {
+function duplicateChecker(text, delimiter, checkerType) {
   document.getElementById("shareBtn").style.display = "block";
-  $('#resultArea').attr("style", "display:block");
+  if(checkerType == 'fileDuplicate'){
+    $('#resultArea').attr("style", "display:block");
+  }else{
+    $('#resultArea').attr("style", "display:none");
+
+  }
   let separators = [];
   let firstString = text;
 

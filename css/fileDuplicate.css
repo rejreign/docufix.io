@@ -255,13 +255,12 @@ color: #3B1F9E;
 
 #textareaResult{
     min-height: 70vh;
-    border-right:0; 
+ 
 }
 
 #textareaBefore{
     min-height: 70vh;
-    border-left: 0;
-    border-right: 0;
+
 }
 
 
