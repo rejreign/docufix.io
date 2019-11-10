@@ -286,7 +286,7 @@ font-weight: bold;
                  <!-- </tr>
                  <tr style = "color: white"></tr>
                  <tr> -->
-                 <select name="lang" id="lang" class="b-btn comp-btn bu" style="padding-left: 10px;"
+                 <select name="lang" id="lang" class="b-btn comp-btn bu" style="padding-left: 10px;">
                      <option value="en-US">English</option>
                      <option value="de-DE">German</option>
                      <option value="it">Italian</option>
