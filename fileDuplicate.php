@@ -81,53 +81,6 @@
             </div>
           </div>
 
-
-        <!-- <div class="w3-container" >
-            <div id="id01" class="w3-modal" >
-              <div class="w3-modal-content mb-0">
-                <span onclick="document.getElementById('id01').style.display='none'"
-                  class="w3-button w3-display-topright mb-0">&times;</span>
-                  
-                  <div class="form-group pl-3 mb-0" id="checkbox">
-                    <label for="modalSetting" class="font-weight-bold"><input type="checkbox" name="modal" id="modalSetting" onchange="visibility()"> Check this box to stop getting this alert</label>
-                    
-                  </div>
-                <div id="modal-header">
-                  <h2>BEFORE GETTING STARTED</h2>
-                </div>
-        
-                <div id="modal-content">
-                  <ul>
-                    <li class="modal-list">Docufix only supports file formats like .docx, .csv, .json, .xml .txt .pdf, .rtf, .odt, .php, .xpt, .ods, .xls, .epud, .css and .dta for
-                      <strong>uploading</strong></li>
-                    <li class="modal-list">To compare documents aside from the ones mentioned above, make use of the text
-                      option, then <strong> copy</strong> and <strong> paste</strong> into the text-box.</strong></li>
-                    <li class="modal-list">Result of the documents compared is given in percentage %</li>
-                    <li><span style="background-color: red" class="space"> RED HIGHLIGHT</span> Means the texts in second text
-                      input that are not found in the first text input</li>
-                    <li><span style="background-color: yellow" class="space"> YELLOW HIGHLIGHT</span> Means the texts in first
-                      text input that are not found in the second text input</li>
-                    <li><strong> PLAIN TEXT</strong> Means text found in both tex inputs</li>
-                    <li>Compared documents can be downloaded as .docs and pdf files</li>
-                    <li>Compared texts are <strong>editable,</strong> this means you can edit your work for correction after
-                      comparing.</li>
-                  </ul>
-        
-                  <h1 id="important">IMPORTANT!!!</h1>
-                  <ul>The following activities would not be efficiently carried out on mobile phone except for larger screen
-                    sizes:
-        
-                    <li>Comparing of documents</li>
-                    <li>Formatting of compared document</li>
-                  </ul>
-                </div>
-        
-        
-        
-        
-              </div>
-            </div>
-          </div> -->
           <header>
           <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
             <a class="navbar-brand px-sm-5 ml-3" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" id="image"></a>
@@ -373,7 +326,7 @@
               <div id="status"></div>
               <div id="text" style="display: none;">
                 <form class="textDuplicate">
-                    <div class="row no-padding">
+                    <div class="row p-4">
                       <div class="col-md-6 no-padding text-center">
                         <label for="textareaBefore">Enter Text</label>
                         <textarea id="textareaBefore" required></textarea>
@@ -453,10 +406,10 @@
                   <div id="page"></div>
                    
                     <textarea id="textareaDifferences" style="min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey"  cols="30" rows="10"></textarea>
-
+<!-- 
                 <button onclick="document.getElementById('id02').style.display='block'" class="btn-dark mt-2 mb-5"
                   style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Download <strong>HERE</strong></button>
-                </div>
+                </div> -->
                     
                 <!---MODAL FOR SAVE AS-->
           
@@ -497,7 +450,7 @@
                 <button class="twtShare" data-js="twitter-share"><i class="fab fa-twitter"></i> Twitter</button>
                 <button class="fbShare" data-js="facebook-share"><i class="fab fa-facebook-f"></i> Facebook</button>
                 <button class="fbShare" data-js="facebook-share"><a
-                    href="mailto:info@example.com?&subject=&body=http://docufix.ga Hey! I just compared my files for similarities on Docufix"><i
+                    href="mailto:info@example.com?&subject=&body=http://docufix.io Hey! I just compared my files for similarities on Docufix"><i
                       class="fas fa-envelope"></i> Email</a></button>
               </div>
           
