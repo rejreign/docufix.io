@@ -398,9 +398,8 @@
                       </li>
                       <li class="page-item active"><a class="page-link" href="teampage.php">1</a></li>
                       <li class="page-item"><a class="page-link" href="teampage-2.php">2</a></li>
-                      <li class="page-item"><a class="page-link" href="teampage-3.php">3</a></li>
                       <li class="page-item next">
-                        <a class="page-link" href="teampage-2.php">Next</a>
+                        <a class="page-link" disabled>Next</a>
                       </li>
                     </ul>
                   </nav>
