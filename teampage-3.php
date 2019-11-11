@@ -111,7 +111,7 @@
                         <div class="col-sm-4"  data-aos="fade-right"  data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <div class="all-users side">
                                 <div class="user-image">
-                                   <div class="generic-image-circle user-image-box-35"></div>
+                                   <div class="generic-image-circle user-image-box-10"></div>
                                </div>
                                <div class="content-part back text-center">
                                    <div class="user-info">
@@ -142,7 +142,7 @@
                         <div class="col-sm-4"  data-aos="fade-up"  data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <div class="all-users side">
                                 <div class="user-image">
-                                   <div class="generic-image-circle user-image-box-53"></div>
+                                   <div class="generic-image-circle user-image-box-13"></div>
                                </div>
                                <div class="content-part back text-center">
                                    <div class="user-info">
