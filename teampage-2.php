@@ -95,7 +95,7 @@
      <section id="team">
             <div class="content-box">
                 <div class="content-title">
-                    <h3>Meet Our Team</h3>
+                    <h2 class="team text-center">Meet Our Team</h2>
           <div class="content-title-underline line"></div>
           
                 </div>
