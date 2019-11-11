@@ -23,6 +23,7 @@
 	  <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
     <link rel="stylesheet" type="text/css" href="css/teampage.css">
     
+    
     </head>
     <style>
       body {
@@ -32,17 +33,21 @@
 			background-size: cover;
 			background-position: center;
 			display: flex;
-			align-items: center;
+      align-items: center;
+      background-color: #fafafa !important;
 		  }
 		  
 		  .our-team {
 			padding: 30px 0 40px;
 			margin-bottom: 30px;
-			background-color: #f7f5ec;
+			background-color: #fff;
 			text-align: center;
 			overflow: hidden;
-			position: relative;
-		  }
+      position: relative;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+      border-radius: 16px;
+      }
+      
 		  
 		  .our-team .picture {
 			display: inline-block;
@@ -65,7 +70,7 @@
 			left: 0;
 			opacity: 0.9;
 			transform: scale(3);
-			transition: all 0.3s linear 0s;
+      transition: all 0.3s linear 0s;
 		  }
 		  
 		  .our-team:hover .picture::before {
@@ -132,7 +137,13 @@
 			transition: all 0.3s ease 0s;
 			text-decoration: none;
 		  }
-		  
+		  .team-content p{
+        font-size: 0.8em;
+      }
+      .team-content h3{
+        font-size: 1.4em;
+        color: #3B1F9E !important;
+      }
 		  .our-team .social li a:hover{
 			background-color: #f7f5ec;
 		  }
@@ -147,13 +158,30 @@
 		   }
        .our-team .social li .fa-twitter:hover{
 			   color: #1DA1F2;
-		   }
+       }
+       @media only screen and (max-width: 500px){
+         .our-team{
+           width: 75%;
+           margin: 5% auto;
+         }
+         .our-team .picture img{
+           width: 75%;
+           height: 75%;
+           
+         }
+         .our-team .picture::after {
+           width: 50%;
+           height: 0;
+         }
+       }
     </style>
     <body>
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top scrolling-navbar" id="nav">
-              <div class="container">
-                  <a class="navbar-brand" href="index.php" id="logo">
+              <div class="container-fluid">
+                  <a class="navbar-brand ml-3
+                  
+                  " href="index.php" id="logo">
                       <img src="https://res.cloudinary.com/kuic/image/upload/v1573054016/docufix/Group_1_5_olg2uj.svg" alt="DOCUFIX" class="image">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" id="btn">
@@ -190,7 +218,7 @@
           </header>  
           <div class="container mt-5">
               <div class="content-title">
-                  <h3 class="team text-center">Meet Our Team</h3>
+                  <h2 class="team text-center">Meet Our Team</h2>
         <div class="content-title-underline line"></div>
             <div class="row">
               <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -487,7 +515,7 @@
                 <a class="navbar-brand  text-justify" href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" class="text-justify" alt="DOCUFIX" id="image"></a>
                 <p class="text-justify">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
             </div>
-          <div class="col-sm-7 text-center">           
+          <div class="col-sm-7 text-center" id="footer">           
               <ul class="list-inline text-center mt-3 pl-3">  
                   <li class="list-inline-item">
                     <a class="text-center" href="contact.php">Contact us</a>
@@ -504,15 +532,21 @@
                   
                 </ul>
           </div>
+          
+              
             </div>
           </div>
           <script src="app.js"></script>
       <script src="js/team.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
                 
+        <script>
+          AOS.init();
+        </script>                
           <script>
             var SCROLLING_NAVBAR_OFFSET_TOP = 100;
             $(window).on("scroll", function() {
