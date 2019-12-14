@@ -86,6 +86,15 @@ if(isset($_POST['submit'])){
 
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151906986-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-151906986-1');
+</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie-edge" />
@@ -108,7 +117,7 @@ if(isset($_POST['submit'])){
                 <a class="navbar-brand  " href="index.php"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
             </div>
             
-            <a href="login.php">Sign in</a>
+            <a href="login.php" class="link">Sign in</a>
         </div>
     </header>
 

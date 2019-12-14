@@ -3,16 +3,21 @@
    
 include 'controller.php';
 
-if(!isset($_SESSION['login_user'])){
 
-header("location: login.php?redirect=grammarChecker.php");
-   
-}
 ?>
  
  <!DOCTYPE html>
  <html lang="en">
      <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151906986-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-151906986-1');
+</script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Docufix |Grammer Check</title>
@@ -268,15 +273,14 @@ font-weight: bold;
                <a class="bt btn-sm rounded-pill font-weight-bold" style="color: rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)" href = "fileUpload.php">Compare files</a>
                <a class="bt btn-sm rounded-pill font-weight-bold mt-md-0 mt-2" style="color:rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)" href = "fileDuplicate.php">Check Duplicates</a>
      </br>
-               
-               <div class="float-right" data-toggle="modal" data-target="#myModal2" style="cursor: pointer;color: rgba(12, 10, 90, 0.8)"  onclick="instruction()"> Instructions</div>
-             </div>
+          <div data-toggle="modal" data-target="#myModal2" style=" margin-top: 10px; cursor: pointer;color: rgba(12, 10, 90, 0.8)"  onclick="instruction()"> Instructions</div>
+        </div>
    </div>
  <article>
  <div>
 
 
-     <form name="checkform" action="http://community.languagetool.org" method="post" style = "padding: 20px; box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1); width:100%;"  id = "form">
+     <form name="checkform" action="http://community.languagetool.org" method="post" style = " margin-top: 20px; padding: 20px; box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1); width:100%;"  id = "form">
          
        
          
@@ -285,13 +289,13 @@ font-weight: bold;
             <div class ="h">
                <table>
 
-                 <td> <tr><input type="button"  class="b-btn comp-btn bu" id ="b3" data-toggle="modal" data-target="#myModal"  value = "Dictionary">
+                 <td> <tr><input type="button" style="margin-right: 20px;"  class="b-btn comp-btn bu" id ="b3" data-toggle="modal" data-target="#myModal"  value = "Dictionary">
                  <!--<td> <input type="button" style="padding-left: 10px; padding-right: 10px; width: 100px; background-color: rgb(12, 10, 90); border-radius: 4px; height: 30px;" class="b-btn comp-btn" data-toggle="modal" data-target="#myModal2"  value ="Help">-->
 
-                 </tr>
-                 <tr style = "color: white">  ... </tr>
-                 <tr>
-                 <select name="lang" id="lang" class="b-btn comp-btn bu">
+                 <!-- </tr>
+                 <tr style = "color: white"></tr>
+                 <tr> -->
+                 <select name="lang" id="lang" class="b-btn comp-btn bu" style="padding-left: 10px;">
                      <option value="en-US">English</option>
                      <option value="de-DE">German</option>
                      <option value="it">Italian</option>
@@ -312,7 +316,7 @@ font-weight: bold;
       <div id = "keyslang" calss = "card-body" style="border-color: #cacaca; padding: 20px; border-style: none; height: 100px">
          <div style="padding-top:150px"></div>
             <input  id = "b2" type="submit" name="_action_checkText"
-                 value="Check Text" onClick="doit();return false;" style="padding-left: 10px; padding-right: 10px; width: 250px; background-color:  #3B1F9E; border-radius: 20px;
+                 value="Check Text" onClick="doit();return false;" style="border: none; outline: none; padding-left: 10px; padding-right: 10px; width: 250px; background-color:  #3B1F9E; border-radius: 20px;
 box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05); height: 40px; color: white; font-weight: bold;" class="b-btn comp-btn"> 
             
                    

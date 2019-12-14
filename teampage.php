@@ -4,6 +4,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151906986-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-151906986-1');
+</script>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,7 +100,7 @@
      <section id="team">
             <div class="content-box">
                 <div class="content-title">
-                    <h3 class="team">Meet Our Team</h3>
+                    <h2 class="team text-center">Meet Our Team</h2>
           <div class="content-title-underline line"></div>
           
                 </div>
@@ -389,9 +398,8 @@
                       </li>
                       <li class="page-item active"><a class="page-link" href="teampage.php">1</a></li>
                       <li class="page-item"><a class="page-link" href="teampage-2.php">2</a></li>
-                      <li class="page-item"><a class="page-link" href="teampage-3.php">3</a></li>
                       <li class="page-item next">
-                        <a class="page-link" href="teampage-2.php">Next</a>
+                        <a class="page-link" disabled>Next</a>
                       </li>
                     </ul>
                   </nav>

@@ -11,6 +11,7 @@ body {
 .link {
   margin-top: -3.3vh !important;
   font-weight: bold !important;
+  color: #3B1F9E;
 }
 a {
   margin-top: -2vh !important;
@@ -31,7 +32,7 @@ a:hover {
 
 .header-wrapper {
   width: 90%;
-  margin: 54.42px auto 0px;
+  margin: 74.42px auto 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
