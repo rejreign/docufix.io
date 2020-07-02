@@ -354,7 +354,10 @@
 
 
 <script type="text/javascript">
+<<<<<<< HEAD
   // jovial code
+=======
+>>>>>>> 62843d85c6ae8c84b3337071218834365353849b
 
 $(document).ready(function(){
   var delay = 2000;
@@ -389,7 +392,11 @@ $(document).ready(function(){
     });
   });
 });
+<<<<<<< HEAD
  // jovial code
+=======
+
+>>>>>>> 62843d85c6ae8c84b3337071218834365353849b
 
           var SCROLLING_NAVBAR_OFFSET_TOP = 100;
           $(window).on("scroll", function() {
