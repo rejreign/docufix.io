@@ -14,7 +14,7 @@ if (empty($email)) {
 
 $sql = "SELECT mail FROM newsletter WHERE mail = '$userMail'";
 
-$sql = "SELECT news_email FROM newsletter WHERE news_email = '$userMail'";
+// $sql = "SELECT news_email FROM newsletter WHERE news_email = '$userMail'";
 
 $qpas = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
@@ -22,16 +22,8 @@ $res = mysqli_num_rows($qpas);
 
     if ($res == 0){
 
-        $sql = "INSERT INTO newsletter (mail) VALUES('$userMail')";
-
-        $sql = "INSERT INTO newsletter (news_email) VALUES('$userMail')";
-
-
-        $resi = mysqli_query($conn, $sql) or die (mysqli_error($conn));
-       
-        if ($resi) {
-    
-require 'mailer/PHPMailer.php';
+   
+       require 'mailer/PHPMailer.php';
 require 'mailer/SMTP.php';
 require 'mailer/Exception.php';
 
@@ -41,7 +33,7 @@ $the_mailer ->Host = "smtp.gmail.com";
 $the_mailer->isSMTP();
 
 $the_mailer->SMTPAuth = true;
-$the_mailer->SMTPDebug = 0; 
+$the_mailer->SMTPDebug = 3; 
 $the_mailer->Username = "docufixwebapp@gmail.com";
 $the_mailer->Password = "docufixwebapP60";
 $the_mailer->SMTPSecure = "tls";//TLS;
@@ -82,6 +74,16 @@ return true;
         // unlink('alldocs/'.$fname);
         return false;
     }
+        if ($resi) {
+
+                 $sql = "INSERT INTO newsletter (mail) VALUES('$userMail')";
+
+        // $sql = "INSERT INTO newsletter (news_email) VALUES('$userMail')";
+
+
+        $resi = mysqli_query($conn, $sql) or die (mysqli_error($conn));
+    
+
 
 }
     
