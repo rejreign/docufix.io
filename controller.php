@@ -3,10 +3,17 @@
  ob_start();
   Class Controller{
           
-  	      private $db_server = "localhost";
+
+  	      // private $db_server = "localhost ";//18.218.34.108
+         //  private $db_name = "docufix";
+         //  private $db_user ="root";//DOCUFIXofficial1
+         //  private $db_pass = ""; //d0AD@m0d@
+
+  	      private $db_server = "18.218.34.108";
           private $db_name = "docufix";
-          private $db_user = "root";
-          private $db_pass = "6yt5^YT%"; 
+          private $db_user = "DOCUFIXofficial1";
+          private $db_pass = "d0AD@m0d@"; 
+
           //private $db_pass = ""; 
 
 

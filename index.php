@@ -355,6 +355,9 @@
 
 <script type="text/javascript">
 
+  // jovial code
+
+
 $(document).ready(function(){
   var delay = 2000;
   $("#newsForm").submit(function(e){

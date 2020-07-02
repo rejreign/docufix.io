@@ -2,10 +2,6 @@
    
    include 'controller.php';
 
- 
-
-
-
 ?>
 <!DOCTYPE html>
  <html lang="en">
@@ -523,8 +519,13 @@
                             doc</button>
                           <button id="cmd" class="mt-2 mb-5"style =" padding: 7px 14px; background-color:  #3B1F9E; color: white;"><i
                               class="fas fa-cloud-download-alt" ></i>Download as PDF</button>
+
+                              <button id="btn-export" onclick="txt();" class="mt-2 mb-5" style="padding: 7px 14px; background-color:  #3B1F9E; color: white;"> 
+                                <i class="fas fa-cloud-download-alt"></i> Download as .txt
+
                               <button id="btn-export" onclick="txt();" class="mt-2 mb-5" style="padding: 7px 14px; background-color:  #3B1F9E; color: white;""><i
                                 class="fas fa-cloud-download-alt"></i> Download as .txt
+
                         </button>
                         
                       </div>
@@ -553,14 +554,29 @@
                     <div class="modal-body">
                     <form method="POST" action="mailsub.php" id="form">
                     <p id="msg" name="msg" class="msgbox"></p>
+
+                      <div class="form-group">
+                    <input type="text" class="form-control"  id="email" name="docName" placeholder="Please input a doc name" required>
+                  </div>
+                  <div class="form-group">
+                                         <select type="select" class="form-control" id="email" name="select">
+
                       
                     <input type="text"  id="email" name="docName" placeholder="Please input a doc name" required>
                        <select type="select" id="email" name="select">
+
                         <option value="txt" selected>select doc type</option>
                         <option value=".txt"> .txt </option>
                         <option value=".doc"> .doc</option>
                        </select>
+
+                     </div>
+                       <div class="form-group">
+                       <input type="email" id="email" class="form-control" name="mail" placeholder="Please input your email Address..." required>
+                     </div>
+
                        <input type="email" id="email" name="mail" placeholder="Please input your email Address..." required>
+
                             <br />
                             <textarea id="ta" cols="50" rows="20" name="txt"></textarea>
                             <br />
@@ -647,11 +663,18 @@
               </div>
             </div>
           </div>
+
+  </footer>
+        
+        <script src="js/app.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
         
   </footer>
         
         <script src="js/app.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="./js/app.js"></script>
@@ -1394,6 +1417,8 @@ $(window).on("scroll", function() {
             
             </script>
 
+
+<!--JOVIAL SAVE AS EMAIL SCRIPT BY MAJOR updated 29-03-2020-->
 
 <!--JOVIAL SAVE AS EMAIL SCRIPT BY MAJOR-->
 
