@@ -9,10 +9,10 @@
          //  private $db_user ="root";//DOCUFIXofficial1
          //  private $db_pass = ""; //d0AD@m0d@
 
-  	      private $db_server = "18.218.34.108";
-          private $db_name = "docufix";
-          private $db_user = "DOCUFIXofficial1";
-          private $db_pass = "d0AD@m0d@"; 
+  	      // private $db_server = "18.218.34.108";
+         //  private $db_name = "docufix";
+         //  private $db_user = "DOCUFIXofficial1";
+         //  private $db_pass = "d0AD@m0d@"; 
 
           //private $db_pass = ""; 
 
