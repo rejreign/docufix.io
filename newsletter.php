@@ -11,21 +11,21 @@ if (empty($email)) {
     }
 
     else if (!empty($email)){
-<<<<<<< HEAD
+
 $sql = "SELECT mail FROM newsletter WHERE mail = '$userMail'";
-=======
+
 $sql = "SELECT news_email FROM newsletter WHERE news_email = '$userMail'";
->>>>>>> 62843d85c6ae8c84b3337071218834365353849b
+
 $qpas = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
 $res = mysqli_num_rows($qpas);
 
     if ($res == 0){
-<<<<<<< HEAD
+
         $sql = "INSERT INTO newsletter (mail) VALUES('$userMail')";
-=======
+
         $sql = "INSERT INTO newsletter (news_email) VALUES('$userMail')";
->>>>>>> 62843d85c6ae8c84b3337071218834365353849b
+
 
         $resi = mysqli_query($conn, $sql) or die (mysqli_error($conn));
        
@@ -57,7 +57,7 @@ $the_mailer->setFrom ("docufixwebapp@gmail.com", "DOCUFIX News Letter ");
 $the_mailer->Subject = "Thank You for subscribing to our news letter";
 $the_mailer->addAddress($email); 
 $the_mailer-> isHTML(true);
-<<<<<<< HEAD
+
 
 $body = "<div class='container'>
                 <div class='row'>
@@ -69,9 +69,9 @@ $body = "<div class='container'>
         </div>
 ";
 $the_mailer->Body = $body ;
-=======
+
 $the_mailer->Body = "Thanks for subscribing to our news letter we will keep you posted. Cheers";
->>>>>>> 62843d85c6ae8c84b3337071218834365353849b
+
 // $the_mailer->addAttachment('alldocs/'.$fname); we dont need this
 
 if ($the_mailer->send()){
