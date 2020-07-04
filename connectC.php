@@ -17,7 +17,9 @@ define ("DB_USER", "DOCUFIXofficial1"); // DOCUFIXofficial1 set database user
 
 define ("DB_PASS","d0AD@m0d@"); //d0AD@m0d@ set database password
 
-define ("DB_NAME","docufix"); // set database name
+define ("DB_NAME","docufix"); 
+
+define ("DB_PORT","3306")// set database name
 
 // define ("DB_HOST", "remotemysql.com"); // set database host
 
@@ -28,7 +30,7 @@ define ("DB_NAME","docufix"); // set database name
 // define ("DB_NAME","MW9hCGSJuv"); // set database name
 
 
-$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME) or die("no connection ooo");
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT) or die("no connection ooo");
 
  
  
