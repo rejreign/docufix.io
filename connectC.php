@@ -28,7 +28,7 @@ define ("DB_NAME","docufix"); // set database name
 // define ("DB_NAME","MW9hCGSJuv"); // set database name
 
 
-$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME) or die("Couldn't make connection.");
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME) or die("no connection ooo");
 
  
  
