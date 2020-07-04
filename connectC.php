@@ -17,7 +17,7 @@ define ("DB_USER", "root"); // DOCUFIXofficial1 set database user
 
 define ("DB_PASS",""); //d0AD@m0d@ set database password
 
-define ("DB_NAME","docunewsletter"); // set database name
+define ("DB_NAME","docufix"); // set database name
 
 // define ("DB_HOST", "remotemysql.com"); // set database host
 
