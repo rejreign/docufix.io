@@ -11,11 +11,11 @@
 
 
 
-define ("DB_HOST", "localhost"); // 18.218.34.108 set database host
+define ("DB_HOST", "18.218.34.108"); // 18.218.34.108 set database host
 
-define ("DB_USER", "root"); // DOCUFIXofficial1 set database user
+define ("DB_USER", "DOCUFIXofficial1"); // DOCUFIXofficial1 set database user
 
-define ("DB_PASS",""); //d0AD@m0d@ set database password
+define ("DB_PASS","d0AD@m0d@"); //d0AD@m0d@ set database password
 
 define ("DB_NAME","docufix"); // set database name
 
