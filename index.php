@@ -57,6 +57,8 @@
                     <a class="dropdown-item text-justify" href="fileUpload.php">Compare files</a>
                     <a class="dropdown-item text-justify" href="grammarChecker.php">Grammar Check</a>
                     <a class="dropdown-item text-justify" href="fileDuplicate.php">Duplicates Check</a>
+                    <a class="dropdown-item text-justify" href="https://summarize.docufix.com.ng">Summarize</a>
+                    <a class="dropdown-item text-justify" href="https://scanner.docufix.com.ng">Scanner</a>
                   </div>
                 </li>
                 <li class="nav-item">
