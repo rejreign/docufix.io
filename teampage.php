@@ -368,7 +368,7 @@
                                      </div>
                                  </div>
                                  <div class="content-footer ">
-                                     <a href="https://twitter.com/rejreign" target="_blank">
+                                     <a href="https://twitter.com/sydunix" target="_blank">
                                          <i class="fab fa-twitter fa-2x social-icons"></i>
                                      </a>
                                      <a href="https://www.instagram.com/sjekp0_" target="_blank">
